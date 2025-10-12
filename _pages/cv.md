@@ -30,9 +30,3 @@ Skills
 * Data Analysis: Competent in analyzing experimental and simulation data for model enhancement.
 * Research Communication: Effective in disseminating research through publications and conferences, collaborating with interdisciplinary teams.
 * Project Management: Experienced in managing and coordinating research projects.
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
