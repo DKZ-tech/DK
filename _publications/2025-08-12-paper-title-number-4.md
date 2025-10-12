@@ -5,5 +5,7 @@ category: manuscripts
 permalink: /publication/2025-08-12-paper-title-number-4
 date: 2025-08-12
 venue: 'Journal of Xian Jiaotong University'
-paperurl: 'http://academicpages.github.io/files/paper03.pdf'
 ---
+<div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+    <img src="{{ '/images/m3.png' | relative_url }}" style="flex:0 1 320px; max-width:320px; height:auto; border-radius:8px;">
+</div>
