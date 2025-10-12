@@ -5,5 +5,4 @@ category: manuscripts
 permalink: /publication/2023-06-28-paper-title-number-1
 date: 2022-08-28
 venue: 'Journal Of Ocean Technology'
-paperurl: 'http://academicpages.github.io/files/paper05.pdf'
 ---
