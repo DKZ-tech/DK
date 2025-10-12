@@ -5,7 +5,6 @@ category: manuscripts
 permalink: /publication/2015-08-18-paper-title-number-3
 date: 2025-08-18
 venue: 'Applied Thermal Engineering'
-paperurl: 'http://academicpages.github.io/files/paper02.pdf'
 ---
 <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
    <img src="{{ '/images/m2.png' | relative_url }}" style="flex:0 1 320px; max-width:320px; height:auto; border-radius:8px;">
