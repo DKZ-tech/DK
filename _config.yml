@@ -88,13 +88,11 @@ publication_category:
   conferences:
     title: 'Conference Papers'
   patents:
-    title: 'patents'
+    title: 'Patents'
   software:
-    title: 'software'
+    title: 'Software'
   standards:
-    title: 'standards'
-
-
+    title: 'Standards'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
