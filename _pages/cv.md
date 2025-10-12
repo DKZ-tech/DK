@@ -24,6 +24,7 @@ Work experience
 Skills
 ======
 * Multi-phase Flow Modeling: Proficient in developing advanced models for simulating complex multi-phase interactions.
+  
 *Machine Learning Techniques: Experienced in using machine learning for data analysis and predictive modeling in multi-phase systems.
 *Waste Incineration Expertise: Strong understanding of waste incineration processes, including energy recovery and emissions control.
 *Software Proficiency: Skilled in ANSYS Fluent, COMSOL Multiphysics, Python, and MATLAB for modeling and analysis.
