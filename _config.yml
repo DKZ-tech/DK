@@ -43,9 +43,6 @@ author:
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
-<div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-    <img src="{{ '/images/wechat.jpg' | relative_url }}" style="flex:0 1 320px; max-width:320px; height:auto; border-radius:8px;">
-  </div>
   
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
