@@ -16,4 +16,4 @@ My research focuses on **multiphase flow CFD simulations**, **AI-driven modeling
     <img src="{{ '/images/g1.gif' | relative_url }}" style="flex:0 1 320px; max-width:320px; height:auto; border-radius:8px;">
 </div>
 I am passionate about bridging computational modeling and sustainable environmental technologies, aiming to contribute to cleaner and smarter industrial processes.
-<img src="{{ '/images/friend.png' | relative_url }}" style="flex:0 1 600px; max-width:100%; height:auto; border-radius:8px;">
+<img src="{{ '/images/friend1.png' | relative_url }}" style="flex:0 1 600px; max-width:100%; height:auto; border-radius:8px;">
