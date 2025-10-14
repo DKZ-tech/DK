@@ -22,5 +22,5 @@ I am passionate about bridging computational modeling and sustainable environmen
 
 
 <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-    <img src="{{ '/images/weixin.jpg' | relative_url }}" style="flex:0 1 320px; max-width:150px; height:auto; border-radius:8px;">
+    <img src="{{ '/images/weixin.png' | relative_url }}" style="flex:0 1 320px; max-width:150px; height:auto; border-radius:8px;">
 </div>
