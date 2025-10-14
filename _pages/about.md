@@ -6,10 +6,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
-Hi! I’m **Dongkuan Zhang**, a third-year Ph.D. student in **Environmental Science and Engineering**, jointly supervised by **Dalian University of Technology (DUT)** and **Science Tokyo (Institute of Science Tokyo)**.
-I am currently based at **Science Tokyo**, in the **Department of Transdisciplinary Science and Engineering, School of Environment and Society**, where I work in the **Cross Laboratory** under the supervision of **Professor Jeffrey S. Cross** ([Lab website](https://zh.clab-tokyotech.org/)).
-At **Dalian University of Technology**, I am advised by **Associate Professor Guozhao Ji** from the **School of Environmental Science and Technology** ([Profile](https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm)).
+I’m Dongkuan Zhang, a third-year Ph.D. student in Environmental Science and Engineering at Dalian University of Technology (DUT), supervised by Associate Professor Guozhao Ji ([Profile](https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm)).
+As a joint Ph.D. student at the Institute of Science Tokyo, I am currently based in the Cross Laboratory, working with Professor Jeffrey S. Cross ([Lab website](https://zh.clab-tokyotech.org/)).
 <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
     <img src="{{ '/images/g0.gif' | relative_url }}" style="flex:0 1 320px; max-width:320px; height:auto; border-radius:8px;">
   </div>
