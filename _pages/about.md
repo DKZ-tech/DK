@@ -6,9 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-我叫张东宽，是大连理工大学环境学院的博士生，我的导师是姬国钊副教授（[导师资料](https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm)）。
+我叫张东宽，是大连理工大学环境学院的博士生，我的导师是姬国钊教授（[导师资料](https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm)）。
 我于2025年，在东京科学大学（前东京工业大学）进行联合培养，为期一年。在东京科学大学期间，我在Cross实验室工作，接受Jeffrey S. Cross教授的指导和培养（[实验室网站](https://zh.clab-tokyotech.org/)）。<br>
-My name is Dongkuan Zhang, and I am a Ph.D. student at the School of Environmental Science and Engineering, Dalian University of Technology. I am supervised by Associate Professor Guozhao Ji ([Profile](https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm)).
+My name is Dongkuan Zhang, and I am a Ph.D. student at the School of Environmental Science and Engineering, Dalian University of Technology. I am supervised by Professor Guozhao Ji ([Profile](https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm)).
 In 2025, I am a visiting Ph.D. student at the Institute of Science Tokyo (formerly Tokyo Institute of Technology) for a one-year joint Ph.D. program. During my stay, I work in the Cross Laboratory under the supervision of Professor Jeffrey S. Cross ([Lab website](https://zh.clab-tokyotech.org/)).
 <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
     <img src="{{ '/images/g0.gif' | relative_url }}" style="flex:0 1 320px; max-width:340px; height:auto; border-radius:8px;">
