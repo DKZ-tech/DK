@@ -74,6 +74,7 @@ strong { color: #000; }
 .cv-table td.type { white-space: nowrap; width: 7em; color: #555; }
 .cv-table tr { page-break-inside: avoid; }
 .cv-meta { color: #444; font-size: 8.5pt; }
+.cv-photo { width: 2.8cm; height: auto; border-radius: 3px; border: 0.5pt solid #bbb; }
 .btn { display: none !important; }
 </style>
 """

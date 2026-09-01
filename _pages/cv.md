@@ -41,21 +41,27 @@ redirect_from:
   .cv-table a { text-decoration: none; }
   .cv-table a:hover { text-decoration: underline; }
   .cv-meta { color: #6b6b6b; font-size: 0.92em; }
+  .cv-photo { width: 120px; height: auto; border-radius: 4px; border: 1px solid #ddd; }
 </style>
 
 <div class="cv-section">
   <h2><span class="lang-zh">基本信息</span><span class="lang-en">Personal Information</span></h2>
-  <table class="cv-table">
-    <tbody>
-      <tr><td class="year"><span class="lang-zh">姓名</span><span class="lang-en">Name</span></td><td><span class="lang-zh">张东宽</span><span class="lang-en">Dongkuan Zhang</span></td></tr>
-      <tr><td class="year"><span class="lang-zh">国籍</span><span class="lang-en">Nationality</span></td><td><span class="lang-zh">中国</span><span class="lang-en">Chinese</span></td></tr>
-      <tr><td class="year"><span class="lang-zh">出生日期</span><span class="lang-en">Date of Birth</span></td><td>02.05.1995</td></tr>
-      <tr><td class="year"><span class="lang-zh">所在地</span><span class="lang-en">Location</span></td><td><span class="lang-zh">辽宁大连</span><span class="lang-en">Dalian, Liaoning, China</span></td></tr>
-      <tr><td class="year"><span class="lang-zh">电话</span><span class="lang-en">Phone</span></td><td>+86 15510689505</td></tr>
-      <tr><td class="year"><span class="lang-zh">邮箱</span><span class="lang-en">Email</span></td><td><a href="mailto:dkz@mail.dlut.edu.cn">dkz@mail.dlut.edu.cn</a></td></tr>
-      <tr><td class="year"><span class="lang-zh">语言</span><span class="lang-en">Languages</span></td><td><span class="lang-zh">中文（母语）、英语（流利）</span><span class="lang-en">Mandarin (Native), English (Fluent)</span></td></tr>
-    </tbody>
-  </table>
+  <div style="display:flex; gap:20px; flex-wrap:wrap; align-items:flex-start;">
+    <table class="cv-table" style="flex:1; min-width:280px;">
+      <tbody>
+        <tr><td class="year"><span class="lang-zh">姓名</span><span class="lang-en">Name</span></td><td><span class="lang-zh">张东宽</span><span class="lang-en">Dongkuan Zhang</span></td></tr>
+        <tr><td class="year"><span class="lang-zh">国籍</span><span class="lang-en">Nationality</span></td><td><span class="lang-zh">中国</span><span class="lang-en">Chinese</span></td></tr>
+        <tr><td class="year"><span class="lang-zh">出生日期</span><span class="lang-en">Date of Birth</span></td><td>02.05.1995</td></tr>
+        <tr><td class="year"><span class="lang-zh">所在地</span><span class="lang-en">Location</span></td><td><span class="lang-zh">辽宁大连</span><span class="lang-en">Dalian, Liaoning, China</span></td></tr>
+        <tr><td class="year"><span class="lang-zh">电话</span><span class="lang-en">Phone</span></td><td>+86 15510689505</td></tr>
+        <tr><td class="year"><span class="lang-zh">邮箱</span><span class="lang-en">Email</span></td><td><a href="mailto:dkz@mail.dlut.edu.cn">dkz@mail.dlut.edu.cn</a></td></tr>
+        <tr><td class="year"><span class="lang-zh">语言</span><span class="lang-en">Languages</span></td><td><span class="lang-zh">中文（母语）、英语（流利）</span><span class="lang-en">Mandarin (Native), English (Fluent)</span></td></tr>
+      </tbody>
+    </table>
+    <div style="flex:0 0 auto;">
+      <img class="cv-photo" src="../images/profile_cv.jpg" alt="Dongkuan Zhang">
+    </div>
+  </div>
 </div>
 
 <div class="cv-section">
