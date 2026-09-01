@@ -12,9 +12,10 @@
 | 同步 Google Scholar 论文 | 仓库根目录运行 `python scripts/update_scholar.py`，然后提交推送 |
 | 发一条新动态 | 在 `_posts/` 复制任意现有文件，改文件名/日期/内容 |
 | 改首页介绍 | 编辑 `_pages/about.md` |
-| 改简历 | 编辑 `_pages/cv.md` |
+| 改简历 | 编辑 `_pages/cv.md`（章节化结构，新增内容参考 §六） |
 | 换头像 | 覆盖 `images/profile1.jpg`（文件名不变最省事） |
-| 加一条手工成果（软著/标准） | 在 `_publications/` 新建一个 `.md`（参考现有软件著作权条目） |
+| 加一条手工成果（软著 / 标准 / 专利申请号不在 Scholar 的） | 在 `_publications/` 新建一个 `.md`，见 §五 |
+| 替换/上传简历 PDF | 覆盖 `assets/cv/CV_Dongkuan_Zhang.pdf`（CV 页会自动出现"下载 PDF"按钮） |
 
 ---
 
@@ -113,12 +114,100 @@ permalink: /posts/2026/05/new-award/
 ├─ _config.yml        站点主配置（姓名、邮箱、各类学术主页链接）
 ```
 
-## 六、修改个人信息
+## 六、手工新增一条成果（专利 / 软著 / 标准）
+
+Google Scholar 同步脚本**只抓 Scholar 上可见的成果**，以下条目需要手工添加：
+
+- 发明专利**申请公开号**（CN...A，公开阶段、未授权）；
+- 实用新型专利（Scholar 收录不全）；
+- 软件著作权；
+- 团体 / 行业标准。
+
+### 在 `_publications/` 新建一个 `.md` 文件
+
+文件名按日期 + 类型 + 简短标题，例如：
+
+```
+_publications/2025-08-12-patent-fly-ash.md
+```
+
+### 模板（以**发明专利**为例）
+
+```markdown
+---
+title: '<span class="lang-zh">一种垃圾焚烧炉内自降飞灰的装置</span><span class="lang-en">A device for self-settling fly ash in a waste incinerator</span>'
+collection: publications
+category: patents
+permalink: /publication/patent-CN223137888U
+date: 2025-07-22
+venue: '<span class="lang-zh">中国实用新型专利，ZL 2024 2 2052228.7</span><span class="lang-en">China Utility Model Patent No. ZL 2024 2 2052228.7</span>'
+authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en">Guozhao Ji, Dongkuan Zhang</span>'
+---
+
+<p class="lang-zh">简短中文描述……</p>
+<p class="lang-en">Short English description...</p>
+```
+
+### 模板（**软件著作权**）
+
+把 `category: patents` 改成 `category: software`。
+
+### 模板（**标准**）
+
+把 `category: patents` 改成 `category: standards`，`venue` 写标准号 + 名称即可。
+
+### 关键规则
+
+- `permalink` **必须唯一**（同一个分类下不要重复）；
+- `date` 用 `YYYY-MM-DD` 或 `YYYY-01-01`（仅知年份时），决定在分类列表中的排序；
+- `collection: publications` 不能漏，否则 Jekyll 不会收录到出版物集合；
+- 中英文分别用 `<span class="lang-zh">` 和 `<span class="lang-en">` 包裹；
+- `scripts/update_scholar.py` **不会动**这类手工文件，可放心反复运行同步。
+
+---
+
+## 七、修改 / 扩展简历页（`cv.md`）
+
+`_pages/cv.md` 的结构（直接编辑 markdown）：
+
+```
+├─ 顶部：标题 + "下载 PDF" 按钮（引用 assets/cv/CV_Dongkuan_Zhang.pdf）
+├─ 基本信息    ← 新增联系方式在这里
+├─ 教育经历
+├─ 工作经历    ← 工业界经历
+├─ 联合培养 / 访学经历  ← CSC、连理全球等
+├─ 研究方向
+├─ 学术成果概览  ← 显示 Scholar 统计徽章（自动）
+├─ 期刊论文     ← 表格由 Jekyll 从 _publications 分类 = manuscripts 自动生成
+├─ 专利         ← 表格由 Jekyll 从 _publications 分类 = patents 自动生成
+├─ 软件著作权   ← 同上，category: software
+├─ 标准         ← 同上，category: standards
+├─ 科研项目与科技成果转化
+├─ 荣誉与获奖   ← 手写维护
+├─ 技术服务与学术兼职
+└─ 技术技能
+```
+
+**新增 / 修改注意事项**：
+
+- 论文、专利、软著、标准的列表项**不要在 cv.md 里手写**——它们由 Jekyll 根据 `_publications/` 自动渲染。你只要新增 / 修改对应的 `pub-*.md` 或手工 `*.md`，CV 页会自动更新。
+- 「荣誉与获奖」「科研项目与转化」需要手工写，因为它们是离散事件，没有标准化字段。建议使用统一表格样式以保持视觉一致：
+
+```markdown
+<tr><td class="year">2025.09</td><td><strong>奖项名称</strong><br>一句中文或英文注释。</td></tr>
+```
+
+- 改完 CV PDF 后，记得覆盖 `assets/cv/CV_Dongkuan_Zhang.pdf`（保持文件名一致即可），页面的「下载 PDF」按钮会自动指向新文件。
+- CV 页使用的样式（`.cv-table` / `.cv-section`）定义在文件顶部的 `<style>` 块内，要调整字号、改色或加图标直接在那里改。
+
+---
+
+## 八、修改个人信息
 
 `_config.yml` 顶部 `author:` 一节集中管理：头像、姓名、简介、所在地、单位、邮箱、
 Google Scholar / ORCID / GitHub 等链接——想加 ResearchGate、领英等，填上对应字段即可，侧栏会自动出现图标。
 
-## 七、本地预览（已配置好）
+## 九、本地预览（已配置好）
 
 本机已安装 Ruby 3.1.4 + DevKit 到 **`E:\Ruby`**，依赖也已装好。两种方式：
 
@@ -139,7 +228,7 @@ bundle exec jekyll serve
 > 若以后新增 gem 需要编译，务必通过 `ridk enable` 环境执行 `bundle install`，
 > 否则会报 `ruby.h: No such file or directory` 或临时目录权限错误。
 
-## 八、常见问题
+## 十、常见问题
 
 - **推送后网站没更新**：等 1–2 分钟；若仍不行，到仓库 Settings → Pages 查看构建错误，或 Actions/Pages 构建日志。
 - **某篇论文信息不对**：先去 Google Scholar 修正资料，再跑一次同步脚本。
