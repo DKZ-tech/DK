@@ -238,7 +238,22 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 <tr><td class="year">2025.09</td><td><strong>奖项名称</strong><br>一句中文或英文注释。</td></tr>
 ```
 
-- 改完 CV PDF 后，记得覆盖 `assets/cv/CV_Dongkuan_Zhang.pdf`（保持文件名一致即可），页面的「下载 PDF」按钮会自动指向新文件。
+- 改完 CV 页内容后，运行下面的脚本即可一键生成最新 PDF 并自动覆盖到 `assets/cv/CV_Dongkuan_Zhang.pdf`（「下载 PDF」按钮指向的文件）。
+
+  ```bash
+  python scripts/generate_cv_pdf.py
+  ```
+
+  脚本流程：① `jekyll build` 构建站点；② 提取 `_site/cv/index.html` 中的 CV 内容区；③ 用无头 Edge/Chrome 按 A4 尺寸打印成 PDF；④ 输出到 `assets/cv/CV_Dongkuan_Zhang.pdf`。
+
+  若 `_site` 已经是最新，可加 `--skip-build` 仅重出 PDF：
+
+  ```bash
+  python scripts/generate_cv_pdf.py --skip-build
+  ```
+
+  环境要求：已安装 Ruby/Jekyll（`E:\Ruby`）、Microsoft Edge 或 Google Chrome。
+
 - CV 页使用的样式（`.cv-table` / `.cv-section`）定义在文件顶部的 `<style>` 块内，要调整字号、改色或加图标直接在那里改。
 
 ---
