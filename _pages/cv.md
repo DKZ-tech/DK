@@ -104,7 +104,7 @@ redirect_from:
     <li><span class="lang-zh">专利</span><span class="lang-en">Patents</span>: <strong>8</strong> <span class="lang-zh">项</span><span class="lang-en">patents</span>（<span class="lang-zh">含发明专利申请与实用新型</span><span class="lang-en">including invention applications and utility models</span>）</li>
     <li><span class="lang-zh">软件著作权</span><span class="lang-en">Software copyrights</span>: <strong>2</strong> <span class="lang-zh">项</span><span class="lang-en">items</span></li>
     <li><span class="lang-zh">团体标准</span><span class="lang-en">Group standards</span>: <strong>1</strong> <span class="lang-zh">项（参编）</span><span class="lang-en">(participating drafter)</span></li>
-    <li><span class="lang-zh">科技成果转化</span><span class="lang-en">Technology transfer</span>: <strong>1</strong> <span class="lang-zh">项，合同金额 40 万元</span><span class="lang-en">contract, RMB 400,000</span></li>
+    <li><span class="lang-zh">科技成果转化</span><span class="lang-en">Technology transfer</span>: <strong>1</strong> <span class="lang-zh">项，成果转让金额 40 万元</span><span class="lang-en">patent transfer, RMB 400,000</span></li>
   </ul>
 </div>
 
@@ -190,7 +190,7 @@ redirect_from:
     <tbody>
       <tr>
         <td class="year">2023 – 2024</td>
-        <td><strong><span class="lang-zh">垃圾焚烧炉自降飞灰技术研发（科技成果转化）</span><span class="lang-en">Self-settling fly ash technology for waste incinerators (technology transfer)</span></strong><br><span class="lang-zh">作为成果完成人之一，与企业签订技术开发合同，合同金额 40 万元；个人获学校现金奖励 2 万元。</span><span class="lang-en">As one of the completing researchers, signed a technology development contract with industry (RMB 400,000). Personally awarded RMB 20,000 cash incentive by the university.</span></td>
+        <td><strong><span class="lang-zh">垃圾焚烧炉自降飞灰技术研发（科技成果转化）</span><span class="lang-en">Self-settling fly ash technology for waste incinerators (technology transfer)</span></strong><br><span class="lang-zh">作为成果完成人之一，将自主研发的专利成果及相关研究成果转让给企业，转让金额 40 万元；个人获学校现金奖励 2 万元。</span><span class="lang-en">As one of the completing researchers, transferred self-developed patent achievements and related research results to industry (RMB 400,000). Personally awarded RMB 20,000 cash incentive by the university.</span></td>
       </tr>
     </tbody>
   </table>
