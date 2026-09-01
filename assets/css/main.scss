@@ -41,3 +41,55 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* ==========================================================================
+ * Bilingual (zh / en) language toggle
+ * The <html> element receives class `lang-zh` or `lang-en` (set inline in
+ * head.html and switched by assets/js/language-toggle.js). Content is marked
+ * up as <span class="lang-zh">…</span> / <span class="lang-en">…</span> and
+ * the inactive language is hidden.
+ * ========================================================================== */
+html.lang-zh .lang-en { display: none !important; }
+html.lang-en .lang-zh { display: none !important; }
+
+/* Language toggle button in the masthead */
+#lang-toggle a {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-weight: bold;
+  border: 1px solid rgba(125, 125, 125, 0.4);
+  border-radius: 4px;
+  padding: 0.1em 0.5em;
+  line-height: 1.6;
+}
+#lang-toggle a:hover {
+  text-decoration: none;
+  border-color: rgba(125, 125, 125, 0.9);
+}
+
+/* Bilingual paragraphs used across pages */
+p.lang-zh, p.lang-en { text-align: justify; }
+
+/* Homepage news / highlight cards */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+.home-card {
+  border: 1px solid rgba(125, 125, 125, 0.25);
+  border-radius: 8px;
+  padding: 0.9em 1em;
+  background: rgba(125, 125, 125, 0.04);
+}
+.home-card h3 { margin-top: 0; }
+
+/* Publication list refinements */
+.pub-meta { color: #6b6b6b; }
+.pub-stats span {
+  display: inline-block;
+  margin-right: 1em;
+}

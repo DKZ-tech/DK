@@ -1,17 +1,25 @@
 ---
 layout: archive
-title: "Publications"
+title: '<span class="lang-zh">论文成果 / </span><span class="lang-en">Publications</span>'
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% if site.data.scholar %}
+<div class="pub-stats">
+  <span><i class="fa-solid fa-quote-right" aria-hidden="true"></i> <strong>{{ site.data.scholar.total_citations }}</strong> <span class="lang-zh">总被引</span><span class="lang-en">citations</span></span>
+  <span><strong>h-index: {{ site.data.scholar.h_index }}</strong></span>
+  <span><strong>i10-index: {{ site.data.scholar.i10_index }}</strong></span>
+  <span style="color:#6b6b6b;">(<span class="lang-zh">更新于</span><span class="lang-en">updated</span> {{ site.data.scholar.updated_at | date: "%Y-%m-%d" }})</span>
+</div>
 {% endif %}
+
+<p class="lang-zh">以下列表由脚本自动同步自 <a href="{{ site.author.googlescholar }}">我的 Google Scholar 主页</a>，专利、软件著作权与标准条目为手工维护。点击每条成果的 “Google Scholar” 链接可查看详细引用信息。</p>
+<p class="lang-en">The publication list below is auto-synced from <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>; patents, software copyrights and standards are maintained manually. Click the "Google Scholar" link of each entry for detailed citation information.</p>
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<!-- Render by publication category -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -31,6 +39,3 @@ author_profile: true
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-
-

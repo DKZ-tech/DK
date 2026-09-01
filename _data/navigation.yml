@@ -1,18 +1,14 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+# Main navigation (bilingual titles are toggled by the language switch in the masthead).
 
 main:
-  - title: "发表作品/Publications"
+  - title: '<span class="lang-zh">首页</span><span class="lang-en">Home</span>'
+    url: /
+
+  - title: '<span class="lang-zh">论文成果</span><span class="lang-en">Publications</span>'
     url: /publications/
-        
-  - title: "时刻/Moments"
+
+  - title: '<span class="lang-zh">动态</span><span class="lang-en">Moments</span>'
     url: /year-archive/
-    
-  - title: "简历/CV"
+
+  - title: '<span class="lang-zh">简历</span><span class="lang-en">CV</span>'
     url: /cv/
