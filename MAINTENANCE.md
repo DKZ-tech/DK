@@ -15,6 +15,7 @@
 | 改简历 | 编辑 `_pages/cv.md`（章节化结构，新增内容参考 §六） |
 | 换头像 | 覆盖 `images/profile1.jpg`（文件名不变最省事） |
 | 加一条手工成果（软著 / 标准 / 专利申请号不在 Scholar 的） | 在 `_publications/` 新建一个 `.md`，见 §五 |
+| 新增 / 修改科研项目 | 编辑 `_data/projects.yml`，见 §六 |
 | 替换/上传简历 PDF | 覆盖 `assets/cv/CV_Dongkuan_Zhang.pdf`（CV 页会自动出现"下载 PDF"按钮） |
 
 ---
@@ -80,7 +81,8 @@ permalink: /posts/2026/05/new-award/
 - `permalink` 每篇**必须唯一**（历史遗留的重复 permalink bug 已修复，别再复制错）；
 - 图片先放进 `images/` 文件夹；
 - 多图并排用 `<div class="post-figure">…</div>` 包裹，单张大图可用 `<div class="post-figure single">…</div>`，系统会自动在手机和电脑上合理缩放；
-- 中英文分别放在 `class="lang-zh"` / `class="lang-en"` 的段落里，由页面右上角语言按钮切换。
+- 中英文分别放在 `class="lang-zh"` / `class="lang-en"` 的段落里，由页面右上角语言按钮切换；
+- **动态列表页现在统一为纯文字 + 时间轴布局**：图片只在点进详情页后显示，列表里不再出现大小不一的缩略图。
 
 图片规格建议（保持站点加载速度）：
 
@@ -118,7 +120,8 @@ permalink: /posts/2026/05/new-award/
 │   └─ 2025-*-*.md      ← 手工维护（软著、标准）
 ├─ _data/
 │   ├─ scholar.yml      ← 脚本生成的引用统计，勿手工编辑
-│   └─ navigation.yml   ← 导航栏菜单
+│   ├─ navigation.yml   ← 导航栏菜单
+│   └─ projects.yml     ← 科研项目列表（手工维护）
 ├─ images/            图片与头像（头像为 profile1.jpg）
 ├─ scripts/
 │   └─ update_scholar.py ← Google Scholar 一键同步脚本
@@ -175,6 +178,32 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 - `collection: publications` 不能漏，否则 Jekyll 不会收录到出版物集合；
 - 中英文分别用 `<span class="lang-zh">` 和 `<span class="lang-en">` 包裹；
 - `scripts/update_scholar.py` **不会动**这类手工文件，可放心反复运行同步。
+
+---
+
+## 六、新增 / 修改科研项目
+
+论文成果页（`/publications/`）右侧现在按分类展示，左侧有 sticky 导航。其中「科研项目」板块读取 `_data/projects.yml`。
+
+### 模板
+
+```yaml
+- title_zh: "中文项目名称"
+  title_en: "English project title"
+  id: "项目编号（没有可留空）"
+  funder_zh: "资助来源中文"
+  funder_en: "Funding source English"
+  role_zh: "参与 / 核心成员 / 数值模拟技术服务"
+  role_en: "Participant / Core member / Numerical simulation service"
+  period: "2023–2025"
+```
+
+### 关键规则
+
+- 所有字段都支持中英双语；
+- `id` 为空时项目编号行会自动隐藏；
+- 保存后无需额外配置，论文成果页会自动渲染；
+- CV 页如需同步引用科研项目，可直接链接到 `/publications/#projects`。
 
 ---
 

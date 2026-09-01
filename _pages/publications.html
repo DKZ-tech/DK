@@ -1,41 +1,113 @@
 ---
 layout: archive
-title: '<span class="lang-zh">论文成果 / </span><span class="lang-en">Publications</span>'
+title: '<span class="lang-zh">论文成果</span><span class="lang-en">Publications</span>'
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
-
-{% if site.data.scholar %}
-<div class="pub-stats">
-  <span><i class="fa-solid fa-quote-right" aria-hidden="true"></i> <strong>{{ site.data.scholar.total_citations }}</strong> <span class="lang-zh">总被引</span><span class="lang-en">citations</span></span>
-  <span><strong>h-index: {{ site.data.scholar.h_index }}</strong></span>
-  <span><strong>i10-index: {{ site.data.scholar.i10_index }}</strong></span>
-  <span style="color:#6b6b6b;">(<span class="lang-zh">更新于</span><span class="lang-en">updated</span> {{ site.data.scholar.updated_at | date: "%Y-%m-%d" }})</span>
-</div>
-{% endif %}
-
-<p class="lang-zh">以下列表由脚本自动同步自 <a href="{{ site.author.googlescholar }}">我的 Google Scholar 主页</a>，专利、软件著作权与标准条目为手工维护。点击每条成果的 “Google Scholar” 链接可查看详细引用信息。</p>
-<p class="lang-en">The publication list below is auto-synced from <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>; patents, software copyrights and standards are maintained manually. Click the "Google Scholar" link of each entry for detailed citation information.</p>
 
 {% include base_path %}
 
-<!-- Render by publication category -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+{% assign manuscripts = site.publications | where: 'category', 'manuscripts' %}
+{% assign patents     = site.publications | where: 'category', 'patents' %}
+{% assign software    = site.publications | where: 'category', 'software' %}
+{% assign standards   = site.publications | where: 'category', 'standards' %}
+{% assign projects    = site.data.projects %}
+
+<div class="pub-layout">
+  <aside class="pub-sidebar">
+    <nav aria-label="Publication categories">
+      <ul>
+        <li><a href="#overview"><span class="lang-zh">概览</span><span class="lang-en">Overview</span></a></li>
+        {% if manuscripts.size > 0 %}
+        <li><a href="#journal-articles"><span class="lang-zh">期刊论文</span><span class="lang-en">Journal Articles</span><span class="pub-count">{{ manuscripts.size }}</span></a></li>
+        {% endif %}
+        {% if patents.size > 0 %}
+        <li><a href="#patents"><span class="lang-zh">专利</span><span class="lang-en">Patents</span><span class="pub-count">{{ patents.size }}</span></a></li>
+        {% endif %}
+        {% if software.size > 0 %}
+        <li><a href="#software"><span class="lang-zh">软件著作权</span><span class="lang-en">Software</span><span class="pub-count">{{ software.size }}</span></a></li>
+        {% endif %}
+        {% if standards.size > 0 %}
+        <li><a href="#standards"><span class="lang-zh">标准</span><span class="lang-en">Standards</span><span class="pub-count">{{ standards.size }}</span></a></li>
+        {% endif %}
+        {% if projects.size > 0 %}
+        <li><a href="#projects"><span class="lang-zh">科研项目</span><span class="lang-en">Projects</span><span class="pub-count">{{ projects.size }}</span></a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="pub-content">
+    <section id="overview">
+      {% if site.data.scholar %}
+      <div class="pub-stats">
+        <span><i class="fa-solid fa-quote-right" aria-hidden="true"></i> <strong>{{ site.data.scholar.total_citations }}</strong> <span class="lang-zh">总被引</span><span class="lang-en">citations</span></span>
+        <span><strong>h-index: {{ site.data.scholar.h_index }}</strong></span>
+        <span><strong>i10-index: {{ site.data.scholar.i10_index }}</strong></span>
+        <span style="color:#6b6b6b;">(<span class="lang-zh">更新于</span><span class="lang-en">updated</span> {{ site.data.scholar.updated_at | date: "%Y-%m-%d" }})</span>
+      </div>
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+
+      <p class="lang-zh">以下列表由脚本自动同步自 <a href="{{ site.author.googlescholar }}">我的 Google Scholar 主页</a>，专利、软件著作权、标准与科研项目条目为手工维护。点击每条成果的 “Google Scholar” 链接可查看详细引用信息。</p>
+      <p class="lang-en">The publication list below is auto-synced from <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>; patents, software copyrights, standards and research projects are maintained manually. Click the "Google Scholar" link of each entry for detailed citation information.</p>
+    </section>
+
+    {% if manuscripts.size > 0 %}
+    <section id="journal-articles">
+      <h2><span class="lang-zh">期刊论文</span><span class="lang-en">Journal Articles</span></h2>
+      <hr />
+      {% for post in manuscripts reversed %}
+        {% include archive-single.html %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if patents.size > 0 %}
+    <section id="patents">
+      <h2><span class="lang-zh">专利</span><span class="lang-en">Patents</span></h2>
+      <hr />
+      {% for post in patents reversed %}
+        {% include archive-single.html %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if software.size > 0 %}
+    <section id="software">
+      <h2><span class="lang-zh">软件著作权</span><span class="lang-en">Software Copyrights</span></h2>
+      <hr />
+      {% for post in software reversed %}
+        {% include archive-single.html %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if standards.size > 0 %}
+    <section id="standards">
+      <h2><span class="lang-zh">标准</span><span class="lang-en">Standards</span></h2>
+      <hr />
+      {% for post in standards reversed %}
+        {% include archive-single.html %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if projects.size > 0 %}
+    <section id="projects">
+      <h2><span class="lang-zh">科研项目</span><span class="lang-en">Research Projects</span></h2>
+      <hr />
+      {% for project in projects %}
+      <div class="project-item">
+        <h3><span class="lang-zh">{{ project.title_zh }}</span><span class="lang-en">{{ project.title_en }}</span></h3>
+        <div class="project-meta">
+          {% if project.id %}<span class="lang-zh">项目编号</span><span class="lang-en">Project ID</span>: {{ project.id }} · {% endif %}
+          <span class="lang-zh">{{ project.funder_zh }}</span><span class="lang-en">{{ project.funder_en }}</span> · {{ project.period }}
+        </div>
+        <p class="lang-zh"><strong>承担角色：</strong>{{ project.role_zh }}</p>
+        <p class="lang-en"><strong>Role:</strong> {{ project.role_en }}</p>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+  </div>
+</div>

@@ -267,3 +267,198 @@ p.lang-zh, p.lang-en { text-align: justify; }
   width: 100%;
   height: auto;
 }
+
+/* ==========================================================================
+ * News/Moments list: keep list view text-only; images live in the detail page
+ * ========================================================================== */
+.archive__item-excerpt img {
+  display: none !important;
+}
+
+/* ==========================================================================
+ * Publications page: two-column layout with sticky category navigation
+ * ========================================================================== */
+.pub-layout {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.pub-sidebar {
+  flex: 0 0 220px;
+  position: sticky;
+  top: 2em;
+  max-height: calc(100vh - 4em);
+  overflow-y: auto;
+  padding-right: 0.5em;
+}
+
+.pub-sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pub-sidebar nav li {
+  margin: 0.35em 0;
+}
+
+.pub-sidebar nav a {
+  display: block;
+  padding: 0.4em 0.6em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.95em;
+  color: var(--global-text-color);
+  border-left: 3px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.pub-sidebar nav a:hover,
+.pub-sidebar nav a.active {
+  background: rgba(125, 125, 125, 0.08);
+  border-left-color: #52adc8;
+  text-decoration: none;
+}
+
+.pub-sidebar .pub-count {
+  float: right;
+  font-size: 0.85em;
+  color: #888;
+}
+
+.pub-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pub-content section {
+  scroll-margin-top: 2em;
+}
+
+.pub-content h2 {
+  margin-top: 1.8em;
+}
+
+.pub-content h2:first-child {
+  margin-top: 0;
+}
+
+.project-item {
+  margin-bottom: 1.25em;
+  padding: 1em;
+  border: 1px solid rgba(125, 125, 125, 0.2);
+  border-radius: 8px;
+  background: rgba(125, 125, 125, 0.03);
+}
+
+.project-item h3 {
+  margin-top: 0;
+  font-size: 1.05em;
+}
+
+.project-meta {
+  font-size: 0.9em;
+  color: #6b6b6b;
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .pub-layout {
+    flex-direction: column;
+  }
+  .pub-sidebar {
+    position: static;
+    flex: 1 1 auto;
+    max-height: none;
+    width: 100%;
+    order: -1;
+    padding: 0.75em;
+    background: rgba(125, 125, 125, 0.04);
+    border-radius: 8px;
+  }
+  .pub-sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+  }
+  .pub-sidebar nav li {
+    margin: 0;
+  }
+  .pub-sidebar nav a {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.35em 0.6em;
+  }
+  .pub-sidebar nav a:hover,
+  .pub-sidebar nav a.active {
+    border-left-color: transparent;
+    border-bottom-color: #52adc8;
+  }
+}
+
+/* ==========================================================================
+ * News/Moments timeline layout
+ * ========================================================================== */
+.moments-timeline {
+  position: relative;
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}
+
+.moments-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  bottom: 0.5em;
+  width: 2px;
+  background: rgba(125, 125, 125, 0.25);
+}
+
+.moment-year {
+  position: relative;
+  margin: 2em 0 1em;
+  padding-left: 1em;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--global-text-color);
+}
+
+.moment-year::before {
+  content: "";
+  position: absolute;
+  left: -1.55em;
+  top: 0.45em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #52adc8;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px rgba(82, 173, 200, 0.3);
+}
+
+.moment-item {
+  position: relative;
+  margin-bottom: 1.25em;
+  padding: 0.9em 1em;
+  border: 1px solid rgba(125, 125, 125, 0.15);
+  border-radius: 8px;
+  background: rgba(125, 125, 125, 0.03);
+}
+
+.moment-excerpt img {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .moments-timeline {
+    padding-left: 1.2em;
+  }
+  .moment-year::before {
+    left: -1.35em;
+  }
+  .moment-item::before {
+    left: -1.45em;
+  }
+}
