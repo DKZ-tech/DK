@@ -63,7 +63,7 @@ redirect_from:
   <h2><span class="lang-zh">工作经历</span><span class="lang-en">Work Experience</span></h2>
   <table class="cv-table">
     <tbody>
-      <tr><td class="year">2017 – 2019</td><td><strong><span class="lang-zh">浙江石油化工有限公司</span><span class="lang-en">Zhejiang Petrochemical Co., Ltd.</span></strong><br><span class="lang-zh">柴油加氢裂化装置内操。负责装置监控、工艺调整、采样分析、故障处置、安全管理与记录维护。</span><span class="lang-en">Diesel hydrocracking unit operator — equipment monitoring, process adjustment, sample collection and analysis, troubleshooting, safety management and record keeping.</span></td></tr>
+      <tr><td class="year">2017 – 2019</td><td><strong><span class="lang-zh">浙江石油化工有限公司</span><span class="lang-en">Zhejiang Petrochemical Co., Ltd.</span></strong><br><span class="lang-zh">柴油加氢裂化装置操作员。负责装置监控、工艺调整、采样分析、故障处置、安全管理与记录维护。</span><span class="lang-en">Diesel hydrocracking unit operator — equipment monitoring, process adjustment, sample collection and analysis, troubleshooting, safety management and record keeping.</span></td></tr>
     </tbody>
   </table>
 </div>
