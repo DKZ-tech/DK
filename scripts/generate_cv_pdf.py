@@ -3,12 +3,17 @@
 generate_cv_pdf.py — 根据网页 CV 界面一键生成最新简历 PDF
 ============================================================
 原理：用 Jekyll 构建站点 -> 提取构建产物 _site/cv/index.html 中的内容区
-(<div class="archive">) -> 套用打印样式 -> 无头 Edge/Chrome 打印为 A4 PDF，
-输出到 assets/cv/CV_Dongkuan_Zhang.pdf（即网页「下载 PDF」按钮指向的文件）。
+(<div class="archive">) -> 按语言过滤 -> 套用打印样式 -> 无头 Edge/Chrome
+打印为 A4 PDF。默认生成三份：
+  * CV_Dongkuan_Zhang.pdf      中英对照（网页「下载 PDF」按钮指向的文件）
+  * CV_Dongkuan_Zhang_CN.pdf   纯中文版
+  * CV_Dongkuan_Zhang_EN.pdf   纯英文版
 
 用法：
-    python scripts/generate_cv_pdf.py             # 完整流程：构建 + 生成 + 校验
-    python scripts/generate_cv_pdf.py --skip-build  # 跳过 jekyll build（_site 已是最新时）
+    python scripts/generate_cv_pdf.py              # 构建 + 生成三份 + 校验
+    python scripts/generate_cv_pdf.py --skip-build # 跳过 jekyll build（_site 已是最新时）
+    python scripts/generate_cv_pdf.py --lang zh    # 只生成中文版
+    python scripts/generate_cv_pdf.py --lang en    # 只生成英文版
 
 依赖：Ruby/Jekyll（构建）、Microsoft Edge 或 Chrome（打印）、
       PyMuPDF（可选，用于校验页数）。
@@ -27,7 +32,13 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 SITE_CV = REPO / "_site" / "cv" / "index.html"
 PRINT_HTML = REPO / "_site" / "cv" / "cv_print.html"
-OUT_PDF = REPO / "assets" / "cv" / "CV_Dongkuan_Zhang.pdf"
+CV_DIR = REPO / "assets" / "cv"
+# 三份输出：双语（默认，网页下载按钮指向）、中文、英文
+OUT_PDFS = {
+    "both": CV_DIR / "CV_Dongkuan_Zhang.pdf",
+    "zh": CV_DIR / "CV_Dongkuan_Zhang_CN.pdf",
+    "en": CV_DIR / "CV_Dongkuan_Zhang_EN.pdf",
+}
 
 RUBY_CANDIDATES = [
     Path(r"E:\Ruby\bin\ruby.exe"),
@@ -168,7 +179,27 @@ def extract_archive(html_text):
     return content
 
 
-def build_print_html(content):
+def filter_lang(content, lang):
+    """按语言过滤 CV 内容区。
+
+    lang: 'zh' -> 保留 lang-zh、删除 lang-en（纯中文版）
+          'en' -> 保留 lang-en、删除 lang-zh（纯英文版）
+          'both' -> 原样返回（中英对照版）
+
+    规约：cv.md 中的语言标记为成对的
+    <span class="lang-zh">…</span> / <span class="lang-en">…</span>，
+    无嵌套、不跨表格行（已在构建产物中验证），故正则替换安全。
+    """
+    if lang == "zh":
+        content = re.sub(r'<span class="lang-en">.*?</span>', '', content, flags=re.S)
+        content = re.sub(r'<span class="lang-zh">(.*?)</span>', r"\1", content, flags=re.S)
+    elif lang == "en":
+        content = re.sub(r'<span class="lang-zh">.*?</span>', '', content, flags=re.S)
+        content = re.sub(r'<span class="lang-en">(.*?)</span>', r"\1", content, flags=re.S)
+    return content
+
+
+def build_print_html(content, lang="both"):
     # 去掉「下载 PDF」按钮（顶部 flex 容器里的 <a class="btn"> 和底部段落）
     content = re.sub(
         r"<a\b[^>]*class=\"[^\"]*\bbtn\b[^\"]*\"[^>]*>.*?</a>",
@@ -178,11 +209,17 @@ def build_print_html(content):
         r"<p[^>]*>\s*(?:<a\b[^>]*class=\"[^\"]*\bbtn\b[^\"]*\"[^>]*>.*?</a>)\s*</p>",
         "", content, flags=re.S,
     )
+    html_lang = "en" if lang == "en" else "zh-CN"
+    titles = {
+        "both": "CV — Dongkuan Zhang (Bilingual)",
+        "zh": "简历 — 张东宽",
+        "en": "CV — Dongkuan Zhang",
+    }
     doc = f"""<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{html_lang}">
 <head>
 <meta charset="utf-8">
-<title>CV — Dongkuan Zhang</title>
+<title>{titles[lang]}</title>
 {PRINT_CSS}
 </head>
 <body>
@@ -191,10 +228,10 @@ def build_print_html(content):
 </body>
 </html>"""
     PRINT_HTML.write_text(doc, encoding="utf-8")
-    print(f"    打印版 HTML: {PRINT_HTML}")
+    print(f"    打印版 HTML（{lang}）: {PRINT_HTML}")
 
 
-def print_to_pdf(browser):
+def print_to_pdf(browser, out_pdf):
     out_dir = Path(tempfile.mkdtemp(prefix="edge_cv_"))
     url = PRINT_HTML.resolve().as_uri()
     cmd = [
@@ -203,37 +240,39 @@ def print_to_pdf(browser):
         f"--user-data-dir={out_dir}",
         "--no-pdf-header-footer",
         "--virtual-time-budget=8000",
-        f"--print-to-pdf={OUT_PDF}",
+        f"--print-to-pdf={out_pdf}",
         url,
     ]
-    print(f"[3/4] 无头浏览器打印 PDF -> {OUT_PDF}")
+    print(f"    无头浏览器打印 PDF -> {out_pdf.name}")
     proc = subprocess.run(cmd, capture_output=True)
     shutil.rmtree(out_dir, ignore_errors=True)
-    if not OUT_PDF.exists() or OUT_PDF.stat().st_size == 0:
+    if not out_pdf.exists() or out_pdf.stat().st_size == 0:
         print(proc.stdout.decode("utf-8", errors="replace")[-1500:], file=sys.stderr)
         print(proc.stderr.decode("utf-8", errors="replace")[-1500:], file=sys.stderr)
         print("[x] PDF 生成失败。", file=sys.stderr)
         sys.exit(1)
 
 
-def verify_pdf():
+def verify_pdf(pdf_path):
     try:
         import fitz  # PyMuPDF
     except ImportError:
         print("    (未安装 PyMuPDF，跳过页数校验)")
         return
-    doc = fitz.open(str(OUT_PDF))
+    doc = fitz.open(str(pdf_path))
     n = doc.page_count
     first = doc[0].get_text().strip().replace("\n", " ")[:60]
-    print(f"[4/4] 校验：共 {n} 页，首页开头：{first}")
+    print(f"    校验：共 {n} 页，首页开头：{first}")
     doc.close()
     if n < 1:
         sys.exit(1)
 
 
 def main():
-    ap = argparse.ArgumentParser(description="根据网页 CV 一键生成简历 PDF")
+    ap = argparse.ArgumentParser(description="根据网页 CV 一键生成简历 PDF（双语 / 中文 / 英文）")
     ap.add_argument("--skip-build", action="store_true", help="跳过 jekyll build")
+    ap.add_argument("--lang", choices=["both", "zh", "en"], default="both",
+                    help="生成哪份 PDF：both=双语+中文+英文三份（默认）；zh=仅中文；en=仅英文")
     args = ap.parse_args()
 
     if not args.skip_build:
@@ -247,19 +286,28 @@ def main():
 
     print("[2/4] 提取 CV 内容区并套用打印样式 ...")
     html_text = SITE_CV.read_text(encoding="utf-8")
-    build_print_html(extract_archive(html_text))
+    content = extract_archive(html_text)
 
+    langs = ["both", "zh", "en"] if args.lang == "both" else [args.lang]
     browser = find_tool(EDGE_CANDIDATES, "msedge") or find_tool(EDGE_CANDIDATES, "chrome")
     if not browser:
         print("[x] 未找到 Edge/Chrome，无法打印 PDF。", file=sys.stderr)
         sys.exit(1)
     print(f"    使用浏览器: {browser}")
 
-    print_to_pdf(browser)
-    verify_pdf()
-    size_kb = OUT_PDF.stat().st_size / 1024
-    print(f"\n完成 ✅ {OUT_PDF}（{size_kb:.0f} KB）")
-    print("推送到 GitHub 后，网页上的「下载 PDF」即指向这份最新简历。")
+    lang_names = {"both": "中英对照", "zh": "中文", "en": "英文"}
+    for lang in langs:
+        build_print_html(filter_lang(content, lang), lang)
+        out_pdf = OUT_PDFS[lang]
+        print_to_pdf(browser, out_pdf)
+        verify_pdf(out_pdf)
+        size_kb = out_pdf.stat().st_size / 1024
+        print(f"    ✅ {out_pdf.name}（{lang_names[lang]}版，{size_kb:.0f} KB）")
+
+    print("\n完成 ✅ 已生成：")
+    for lang in langs:
+        print(f"  - {OUT_PDFS[lang]}（{lang_names[lang]}版）")
+    print("推送到 GitHub 后，网页上的下载按钮即指向最新版简历。")
 
 
 if __name__ == "__main__":

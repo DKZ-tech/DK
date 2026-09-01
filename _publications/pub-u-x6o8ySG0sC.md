@@ -1,11 +1,17 @@
 ---
 title: "深海多金属结核采集过程对沉积物扰动试验研究"
+title_cn: "深海多金属结核采集过程对沉积物扰动试验研究"
+title_en: "Experimental study on sediment disturbance during deep-sea polymetallic nodule collection"
 collection: publications
 category: manuscripts
 permalink: /publication/u-x6o8ySG0sC
 date: 2023-01-01
 venue: '矿冶工程 43 (3)'
+venue_cn: '矿冶工程 43 (3)'
+venue_en: 'Mining and Metallurgical Engineering 43 (3)'
 authors: '张东宽， 刘美麟， 夏建新'
+authors_cn: '张东宽， 刘美麟， 夏建新'
+authors_en: 'Dongkuan Zhang, Meilin Liu, Jianxin Xia'
 paperurl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_R1WLLgAAAAJ&citation_for_view=_R1WLLgAAAAJ:u-x6o8ySG0sC"
 citation_count: 4
 scholar_id: "u-x6o8ySG0sC"

@@ -5,7 +5,7 @@ category: software
 permalink: /publication/software-dsgscs
 date: 2025-09-17
 venue: 'China Computer Software Copyright Registration'
-authors: 'Dongkuan Zhang (张东宽)'
+authors: '<span class="lang-zh">张东宽</span><span class="lang-en">Dongkuan Zhang</span>'
 ---
 
 <p class="lang-zh">登记号：软件著作权登记（2025 年）。该软件用于废弃物焚烧系统双喷枪的自清洁控制，降低喷嘴堵塞导致的非计划停机风险。</p>

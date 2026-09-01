@@ -13,10 +13,20 @@ redirect_from:
   <h1 style="margin:0;">
     <span class="lang-zh">张东宽 简历</span><span class="lang-en">Curriculum Vitae — Dongkuan Zhang</span>
   </h1>
-  <a class="btn" href="{{ '/assets/cv/CV_Dongkuan_Zhang.pdf' | relative_url }}" download>
-    <i class="fa fa-download" aria-hidden="true"></i>
-    <span class="lang-zh">下载 PDF</span><span class="lang-en">Download PDF</span>
-  </a>
+  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+    <a class="btn" href="{{ '/assets/cv/CV_Dongkuan_Zhang_CN.pdf' | relative_url }}" download>
+      <i class="fa fa-download" aria-hidden="true"></i>
+      <span class="lang-zh">中文简历</span><span class="lang-en">CV in Chinese</span>
+    </a>
+    <a class="btn" href="{{ '/assets/cv/CV_Dongkuan_Zhang_EN.pdf' | relative_url }}" download>
+      <i class="fa fa-download" aria-hidden="true"></i>
+      <span class="lang-zh">英文简历</span><span class="lang-en">CV in English</span>
+    </a>
+    <a class="btn" href="{{ '/assets/cv/CV_Dongkuan_Zhang.pdf' | relative_url }}" download>
+      <i class="fa fa-download" aria-hidden="true"></i>
+      <span class="lang-zh">中英对照</span><span class="lang-en">Bilingual</span>
+    </a>
+  </div>
 </div>
 
 <style>
@@ -37,7 +47,7 @@ redirect_from:
   <h2><span class="lang-zh">基本信息</span><span class="lang-en">Personal Information</span></h2>
   <table class="cv-table">
     <tbody>
-      <tr><td class="year"><span class="lang-zh">姓名</span><span class="lang-en">Name</span></td><td><span class="lang-zh">张东宽 / Dongkuan Zhang</span></td></tr>
+      <tr><td class="year"><span class="lang-zh">姓名</span><span class="lang-en">Name</span></td><td><span class="lang-zh">张东宽</span><span class="lang-en">Dongkuan Zhang</span></td></tr>
       <tr><td class="year"><span class="lang-zh">国籍</span><span class="lang-en">Nationality</span></td><td><span class="lang-zh">中国</span><span class="lang-en">Chinese</span></td></tr>
       <tr><td class="year"><span class="lang-zh">出生日期</span><span class="lang-en">Date of Birth</span></td><td>02.05.1995</td></tr>
       <tr><td class="year"><span class="lang-zh">所在地</span><span class="lang-en">Location</span></td><td><span class="lang-zh">辽宁大连</span><span class="lang-en">Dalian, Liaoning, China</span></td></tr>
@@ -117,9 +127,9 @@ redirect_from:
       <tr>
         <td class="year">{{ p.date | date: "%Y" }}</td>
         <td>
-          <strong>{{ p.title }}</strong><br>
-          <span class="cv-meta">{{ p.authors }}</span><br>
-          <em>{{ p.venue }}</em>
+          <strong><span class="lang-zh">{{ p.title_cn | default: p.title }}</span><span class="lang-en">{{ p.title_en | default: p.title }}</span></strong><br>
+          <span class="cv-meta"><span class="lang-zh">{{ p.authors_cn | default: p.authors }}</span><span class="lang-en">{{ p.authors_en | default: p.authors }}</span></span><br>
+          <em><span class="lang-zh">{{ p.venue_cn | default: p.venue }}</span><span class="lang-en">{{ p.venue_en | default: p.venue }}</span></em>
           {% if p.paperurl %} · <a href="{{ p.paperurl }}">link</a>{% endif %}
           {% if p.citation_count and p.citation_count != 0 %} · <span class="cv-meta">{{ p.citation_count }} citations</span>{% endif %}
         </td>
@@ -232,4 +242,8 @@ redirect_from:
   </table>
 </div>
 
-<p style="margin-top:2em;"><a href="{{ '/assets/cv/CV_Dongkuan_Zhang.pdf' | relative_url }}" download class="btn"><i class="fa fa-download" aria-hidden="true"></i> <span class="lang-zh">下载完整简历 PDF</span><span class="lang-en">Download full CV (PDF)</span></a></p>
+<p style="margin-top:2em; display:flex; gap:10px; flex-wrap:wrap;">
+  <a href="{{ '/assets/cv/CV_Dongkuan_Zhang_CN.pdf' | relative_url }}" download class="btn"><i class="fa fa-download" aria-hidden="true"></i> <span class="lang-zh">下载中文简历</span><span class="lang-en">Download CV (Chinese)</span></a>
+  <a href="{{ '/assets/cv/CV_Dongkuan_Zhang_EN.pdf' | relative_url }}" download class="btn"><i class="fa fa-download" aria-hidden="true"></i> <span class="lang-zh">下载英文简历</span><span class="lang-en">Download CV (English)</span></a>
+  <a href="{{ '/assets/cv/CV_Dongkuan_Zhang.pdf' | relative_url }}" download class="btn"><i class="fa fa-download" aria-hidden="true"></i> <span class="lang-zh">下载中英对照</span><span class="lang-en">Download CV (Bilingual)</span></a>
+</p>

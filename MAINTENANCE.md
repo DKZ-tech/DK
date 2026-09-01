@@ -212,7 +212,7 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 `_pages/cv.md` 的结构（直接编辑 markdown）：
 
 ```
-├─ 顶部：标题 + "下载 PDF" 按钮（引用 assets/cv/CV_Dongkuan_Zhang.pdf）
+├─ 顶部：标题 + 三份下载按钮（中文简历 / English CV / 中英对照）
 ├─ 基本信息    ← 新增联系方式在这里
 ├─ 教育经历
 ├─ 工作经历    ← 工业界经历
@@ -231,30 +231,65 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 
 **新增 / 修改注意事项**：
 
-- 论文、专利、软著、标准的列表项**不要在 cv.md 里手写**——它们由 Jekyll 根据 `_publications/` 自动渲染。你只要新增 / 修改对应的 `pub-*.md` 或手工 `*.md`，CV 页会自动更新。
-- 「荣誉与获奖」「科研项目与转化」需要手工写，因为它们是离散事件，没有标准化字段。建议使用统一表格样式以保持视觉一致：
+1. **简历内容的双语标记规则**
 
-```markdown
-<tr><td class="year">2025.09</td><td><strong>奖项名称</strong><br>一句中文或英文注释。</td></tr>
-```
+   为了从同一份网页 CV 自动生成「中文简历 / 英文简历 / 中英对照」三份 PDF，CV 正文中的每一句/每一段都**必须**用如下格式包裹：
 
-- 改完 CV 页内容后，运行下面的脚本即可一键生成最新 PDF 并自动覆盖到 `assets/cv/CV_Dongkuan_Zhang.pdf`（「下载 PDF」按钮指向的文件）。
+   ```html
+   <span class="lang-zh">中文内容</span><span class="lang-en">English content</span>
+   ```
 
-  ```bash
-  python scripts/generate_cv_pdf.py
-  ```
+   - 只写中文不写英文 → 英文版 PDF 中该处会缺失；
+   - 只写英文不写中文 → 中文版 PDF 中该处会缺失；
+   - 中英混杂写在一个 `span` 里 → 英文版会残留中文、中文版会残留英文，影响纯净度。
 
-  脚本流程：① `jekyll build` 构建站点；② 提取 `_site/cv/index.html` 中的 CV 内容区；③ 用无头 Edge/Chrome 按 A4 尺寸打印成 PDF；④ 输出到 `assets/cv/CV_Dongkuan_Zhang.pdf`。
+   对于纯数字 / 专利号 / 网址等专有名词，可以放在对应语言 `span` 内，不影响阅读。
 
-  若 `_site` 已经是最新，可加 `--skip-build` 仅重出 PDF：
+2. **论文、专利、软著、标准不要手写**
 
-  ```bash
-  python scripts/generate_cv_pdf.py --skip-build
-  ```
+   这些列表由 Jekyll 根据 `_publications/` 自动渲染到 CV 页。你只要新增 / 修改对应的 `*.md` 文件即可。
 
-  环境要求：已安装 Ruby/Jekyll（`E:\Ruby`）、Microsoft Edge 或 Google Chrome。
+   - 英文论文：保持 `title` / `authors` / `venue` 为英文即可，中文版会自动显示英文标题（学术惯例）。
+   - 中文论文：除 `title` / `authors` / `venue` 外，建议再补充 `title_cn` / `title_en` / `authors_cn` / `authors_en` / `venue_cn` / `venue_en`，这样中文版显示中文、英文版显示英文翻译。
+   - 专利 / 软著 / 标准：如果 `authors` 是中英混杂（例如 `Dongkuan Zhang (张东宽)`），请改成双语 span：
+     ```yaml
+     authors: '<span class="lang-zh">张东宽</span><span class="lang-en">Dongkuan Zhang</span>'
+     ```
 
-- CV 页使用的样式（`.cv-table` / `.cv-section`）定义在文件顶部的 `<style>` 块内，要调整字号、改色或加图标直接在那里改。
+3. **一键生成三份 PDF**
+
+   改完 CV 或 `_publications/` 后，运行：
+
+   ```bash
+   python scripts/generate_cv_pdf.py
+   ```
+
+   脚本流程：
+
+   1. `jekyll build` 构建站点；
+   2. 从 `_site/cv/index.html` 提取 CV 内容区；
+   3. 按语言拆分生成 **三份** PDF（都会自动覆盖到 `assets/cv/`）：
+      - `CV_Dongkuan_Zhang.pdf` —— **中英对照版**（原默认下载文件）
+      - `CV_Dongkuan_Zhang_CN.pdf` —— **纯中文版**
+      - `CV_Dongkuan_Zhang_EN.pdf` —— **纯英文版**
+   4. 用无头 Edge/Chrome 按 A4 尺寸打印，并自动校验输出。
+
+   若 `_site` 已经是最新，可加 `--skip-build` 仅重出 PDF：
+
+   ```bash
+   python scripts/generate_cv_pdf.py --skip-build
+   ```
+
+   只想生成其中一份时：
+
+   ```bash
+   python scripts/generate_cv_pdf.py --lang zh   # 仅中文版
+   python scripts/generate_cv_pdf.py --lang en   # 仅英文版
+   ```
+
+   环境要求：已安装 Ruby/Jekyll（`E:\Ruby`）、Microsoft Edge 或 Google Chrome。
+
+4. CV 页使用的样式（`.cv-table` / `.cv-section`）定义在文件顶部的 `<style>` 块内，要调整字号、改色或加图标直接在那里改。
 
 ---
 

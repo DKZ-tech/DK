@@ -5,7 +5,7 @@ category: standards
 permalink: /publication/standard-waste-h2
 date: 2025-01-20
 venue: 'Group/Industry Standard (participating author)'
-authors: 'Dongkuan Zhang (张东宽), et al.'
+authors: '<span class="lang-zh">张东宽（参编）等</span><span class="lang-en">Dongkuan Zhang (participating drafter), et al.</span>'
 ---
 
 <p class="lang-zh">参编标准（2025 年发布）。规定了以高温热解气化路线处理废弃物并制取氢气的系统技术要求。</p>
