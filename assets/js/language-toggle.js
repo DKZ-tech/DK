@@ -40,5 +40,45 @@
         apply(next);
       });
     });
+
+    // Copy WeChat ID to clipboard on the homepage contact card
+    var copyBtn = document.querySelector('.copy-wechat-btn');
+    var feedback = document.getElementById('copy-feedback');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        var text = copyBtn.getAttribute('data-clipboard-text') || '';
+        function show(ok) {
+          if (!feedback) return;
+          var isZh = document.documentElement.classList.contains('lang-zh');
+          feedback.textContent = ok
+            ? (isZh ? '已复制到剪贴板' : 'Copied to clipboard')
+            : (isZh ? '复制失败，请手动选中复制' : 'Copy failed; please select and copy manually');
+          feedback.className = 'copy-feedback ' + (ok ? 'copy-success' : 'copy-error');
+          setTimeout(function () {
+            feedback.textContent = '';
+            feedback.className = 'copy-feedback';
+          }, 2500);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { show(true); }, function () { show(false); });
+        } else {
+          // Fallback for older browsers / non-secure contexts
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'absolute';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            show(true);
+          } catch (e) {
+            show(false);
+          }
+        }
+      });
+    }
   });
 })();

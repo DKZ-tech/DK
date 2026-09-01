@@ -73,12 +73,35 @@ redirect_from:
 
 <h2><span class="lang-zh">联系方式</span><span class="lang-en">Contact</span></h2>
 
-<p class="lang-zh">欢迎通过邮件（见左侧边栏）或微信与我交流，也可以在 <a href="https://scholar.google.com/citations?user=_R1WLLgAAAAJ&hl=en">Google Scholar</a> 上查看我的全部学术成果。</p>
+<p class="lang-zh">欢迎通过邮件（见左侧边栏）或微信与我交流，也欢迎在 <a href="https://scholar.google.com/citations?user=_R1WLLgAAAAJ&hl=en">Google Scholar</a> 上查看我的全部学术成果。</p>
 <p class="lang-en">Feel free to reach me by email (see the sidebar) or WeChat. You can also find my full publication record on <a href="https://scholar.google.com/citations?user=_R1WLLgAAAAJ&hl=en">Google Scholar</a>.</p>
 
-<div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-    <figure style="text-align:center; margin:0;">
-      <img src="{{ '/images/weixin.png' | relative_url }}" style="max-width:150px; height:auto; border-radius:8px;" alt="WeChat QR code">
-      <figcaption style="font-size:0.85em; color:#6b6b6b;"><span class="lang-zh">个人微信</span><span class="lang-en">WeChat</span></figcaption>
-    </figure>
+<div class="contact-card">
+  <div class="contact-qr">
+    <img src="{{ '/images/weixin-qr.jpg' | relative_url }}" alt="WeChat QR code">
+    <div class="contact-qr-caption">
+      <span class="lang-zh">微信扫一扫添加好友</span>
+      <span class="lang-en">Scan to add on WeChat</span>
+    </div>
+  </div>
+
+  <div class="contact-or" aria-hidden="true">
+    <span class="lang-zh">或</span>
+    <span class="lang-en">or</span>
+  </div>
+
+  <div class="contact-id">
+    <div class="contact-id-label">
+      <i class="fab fa-weixin" aria-hidden="true"></i>
+      <span class="lang-zh">微信号</span>
+      <span class="lang-en">WeChat ID</span>
+    </div>
+    <div class="contact-id-value" id="wechat-id">DK-techie</div>
+    <button class="btn btn--success copy-wechat-btn" data-clipboard-text="DK-techie" type="button">
+      <i class="fas fa-copy" aria-hidden="true"></i>
+      <span class="lang-zh">复制微信号</span>
+      <span class="lang-en">Copy ID</span>
+    </button>
+    <div class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></div>
+  </div>
 </div>

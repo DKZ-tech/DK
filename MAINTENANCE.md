@@ -207,6 +207,12 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 `_config.yml` 顶部 `author:` 一节集中管理：头像、姓名、简介、所在地、单位、邮箱、
 Google Scholar / ORCID / GitHub 等链接——想加 ResearchGate、领英等，填上对应字段即可，侧栏会自动出现图标。
 
+### 修改微信二维码 / 微信号
+
+- 微信二维码图片：`images/weixin-qr.jpg`（建议用微信「我 → 二维码名片」截图，替换此文件即可，保持不倾斜、二维码居中）。
+- 微信号：修改 `_config.yml` 中 `author.wechat` 的值，并同步修改 `_pages/about.md` 中两处 `DK-techie`（图片下方的大字和复制按钮的 `data-clipboard-text`）。
+- 首页的联系卡片和左侧边栏都会自动使用新微信号。
+
 ## 九、本地预览（已配置好）
 
 本机已安装 Ruby 3.1.4 + DevKit 到 **`E:\Ruby`**，依赖也已装好。两种方式：
