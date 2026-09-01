@@ -70,8 +70,8 @@ permalink: /posts/2026/05/new-award/
 ---
 <p class="lang-zh">中文正文……</p>
 <p class="lang-en">English body...</p>
-<div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-  <img src="{{ '/images/图片名.jpg' | relative_url }}" style="max-width:320px; height:auto; border-radius:8px;">
+<div class="post-figure">
+  <img src="{{ '/images/example.jpg' | relative_url }}" loading="lazy" alt="图片描述">
 </div>
 ```
 
@@ -79,7 +79,19 @@ permalink: /posts/2026/05/new-award/
 
 - `permalink` 每篇**必须唯一**（历史遗留的重复 permalink bug 已修复，别再复制错）；
 - 图片先放进 `images/` 文件夹；
+- 多图并排用 `<div class="post-figure">…</div>` 包裹，单张大图可用 `<div class="post-figure single">…</div>`，系统会自动在手机和电脑上合理缩放；
 - 中英文分别放在 `class="lang-zh"` / `class="lang-en"` 的段落里，由页面右上角语言按钮切换。
+
+图片规格建议（保持站点加载速度）：
+
+| 图片用途 | 建议宽度 | 建议格式 | 说明 |
+|---|---|---|---|
+| 动态页照片 | ≤720 px | JPEG 82% | 单张控制在 200 KB 以内 |
+| 证书 / 截图 | ≤900 px | PNG-8 或 JPEG 90% | 文字较多用 PNG，照片类用 JPEG |
+| 头像 | 400 px | JPEG 85% | 侧栏显示尺寸只有 175 px |
+| 首页装饰动图 | ≤480 px，≤30 帧 | GIF | 已在 `scripts/optimize_images.py` 中自动处理 |
+
+若批量上传后体积仍大，可运行仓库中的 `scripts/optimize_images.py` 一键压缩（会自动按上表规则处理）。
 
 ---
 
@@ -239,3 +251,22 @@ bundle exec jekyll serve
 - **推送后网站没更新**：等 1–2 分钟；若仍不行，到仓库 Settings → Pages 查看构建错误，或 Actions/Pages 构建日志。
 - **某篇论文信息不对**：先去 Google Scholar 修正资料，再跑一次同步脚本。
 - **语言切换按钮没反应**：清浏览器缓存；确认 `assets/js/language-toggle.js` 存在且 `_includes/scripts.html` 中有引用。
+
+---
+
+## 十一、图片上传与压缩建议
+
+本站所有图片已经过响应式处理：
+
+- 桌面端：动态页照片默认 320 px 宽、证书默认 420 px 宽；
+- 手机端（≤480 px）：图片会自动占满容器宽度，避免左右滑动；
+- 非首屏图片全部启用 `loading="lazy"`，滚动到附近才加载；
+- 全局 `max-width: 100%; height: auto` 兜底，防止任何图片撑破布局。
+
+你后续上传图片时，遵循 §三「图片规格建议」即可。若嫌手动压缩麻烦，把原图丢进 `images/` 后运行：
+
+```bash
+python scripts/optimize_images.py
+```
+
+该脚本会按用途自动压缩 GIF/JPEG/PNG，并尽量保留透明度/文字清晰度。

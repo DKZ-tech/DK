@@ -200,3 +200,70 @@ p.lang-zh, p.lang-en { text-align: justify; }
     max-width: 220px;
   }
 }
+
+/* ==========================================================================
+ * Responsive images: global fallback + reusable figure layouts
+ * ========================================================================== */
+
+/* Ensure images never overflow their containers, including tables and figures */
+.page__content img,
+.archive__item-body img,
+.home-figure img,
+.post-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Home page decorative GIFs */
+.home-figure {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 1.5em 0;
+}
+.home-figure img {
+  flex: 0 1 320px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* News/post image grids */
+.post-figure {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 1.5em 0;
+}
+.post-figure img {
+  flex: 0 1 320px;
+  width: 100%;
+  border-radius: 8px;
+}
+.post-figure.single img {
+  flex: 0 1 420px;
+}
+
+/* Reduce gaps on very narrow screens so images use the full width */
+@media (max-width: 480px) {
+  .home-figure,
+  .post-figure {
+    gap: 8px;
+  }
+  .home-figure img,
+  .post-figure img {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+ * Avatar: keep the sidebar portrait crisp but lightweight
+ * ========================================================================== */
+.author__avatar img {
+  max-width: 175px;
+  width: 100%;
+  height: auto;
+}

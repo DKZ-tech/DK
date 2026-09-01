@@ -10,8 +10,8 @@ redirect_from:
 <p class="lang-zh">欢迎来到我的个人学术主页！我是<strong>张东宽</strong>，大连理工大学环境学院博士生，导师为<a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">姬国钊教授</a>。2025 年起，我在日本东京科学大学（原东京工业大学）Cross 实验室进行为期一年的联合培养，接受 <a href="https://zh.clab-tokyotech.org/">Jeffrey S. Cross 教授</a>的指导。</p>
 <p class="lang-en">Welcome to my academic homepage! I am <strong>Dongkuan Zhang</strong>, a PhD student at the School of Environmental Science and Engineering, Dalian University of Technology, supervised by <a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">Prof. Guozhao Ji</a>. Since 2025, I have been a joint PhD student in the <a href="https://zh.clab-tokyotech.org/">Cross Laboratory</a> at the Institute of Science Tokyo (formerly Tokyo Institute of Technology) under the supervision of Prof. Jeffrey S. Cross.</p>
 
-<div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:1.5em 0;">
-    <img src="{{ '/images/g0.gif' | relative_url }}" style="flex:0 1 320px; max-width:340px; height:auto; border-radius:8px;" alt="research animation">
+<div class="home-figure">
+  <img src="{{ '/images/g0.gif' | relative_url }}" loading="lazy" alt="Research animation: CFD + AI">
 </div>
 
 <h2><span class="lang-zh">研究方向</span><span class="lang-en">Research Interests</span></h2>
@@ -67,8 +67,8 @@ redirect_from:
 
 <p><a href="{{ '/year-archive/' | relative_url }}"><i class="fa fa-arrow-right" aria-hidden="true"></i> <span class="lang-zh">查看全部动态</span><span class="lang-en">See all moments</span></a></p>
 
-<div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:1.5em 0;">
-    <img src="{{ '/images/g1.gif' | relative_url }}" style="flex:0 1 320px; max-width:340px; height:auto; border-radius:8px;" alt="simulation animation">
+<div class="home-figure">
+  <img src="{{ '/images/g1.gif' | relative_url }}" loading="lazy" alt="Simulation animation: rotary kiln and neural network">
 </div>
 
 <h2><span class="lang-zh">联系方式</span><span class="lang-en">Contact</span></h2>
