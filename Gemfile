@@ -11,3 +11,6 @@ end
 
 gem 'github-pages'
 gem 'connection_pool', '2.5.0'
+
+# Windows 本地预览所需（GitHub Pages 线上构建会自动忽略）
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

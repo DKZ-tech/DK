@@ -118,17 +118,26 @@ permalink: /posts/2026/05/new-award/
 `_config.yml` 顶部 `author:` 一节集中管理：头像、姓名、简介、所在地、单位、邮箱、
 Google Scholar / ORCID / GitHub 等链接——想加 ResearchGate、领英等，填上对应字段即可，侧栏会自动出现图标。
 
-## 七、本地预览（可选）
+## 七、本地预览（已配置好）
 
-需要安装 Ruby + Jekyll，参见 [Jekyll 官方安装指南](https://jekyllrb.com/docs/installation/windows/)：
+本机已安装 Ruby 3.1.4 + DevKit 到 **`E:\Ruby`**，依赖也已装好。两种方式：
 
-```bash
-bundle install
+**方式一（最简单）**：双击仓库根目录的 `serve_local.bat`，浏览器打开
+<http://127.0.0.1:4000/DK/>，Ctrl+C 关闭。
+
+**方式二（命令行）**：打开 "Start Command Prompt with Ruby"（开始菜单，装 Ruby 时自带）：
+
+```bat
+cd /d D:\Github_projects\DK
 bundle exec jekyll serve
-# 浏览器打开 http://127.0.0.1:4000/DK/
 ```
 
-不装也可以：直接 push，用线上站点 + 浏览器开发者工具检查即可。
+改文件保存后会自动刷新（增量构建），关掉窗口即停。
+不本地预览也可以：直接 push，用线上站点检查。
+
+> 技术备注：原生扩展（racc/sassc 等）编译依赖 MSYS2 工具链（`E:\Ruby\msys64`）。
+> 若以后新增 gem 需要编译，务必通过 `ridk enable` 环境执行 `bundle install`，
+> 否则会报 `ruby.h: No such file or directory` 或临时目录权限错误。
 
 ## 八、常见问题
 
