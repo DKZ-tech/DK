@@ -59,6 +59,7 @@ redirect_from:
 <h2><span class="lang-zh">近期动态</span><span class="lang-en">Recent News</span></h2>
 
 <ul>
+  <li><strong>2026.09</strong> — <span class="lang-zh">即将赴卢森堡大学开展为期 6 个月的联合培养（获大连理工大学"连理全球"留学专项资助）。</span><span class="lang-en">Starting a 6-month joint PhD research visit at the University of Luxembourg, funded by the DUT Global Vision Project.</span></li>
   <li><strong>2026.04</strong> — <span class="lang-zh">导师的导师 <a href="https://chemeng.uq.edu.au/profile/7851/joe-diniz-da-costa">Joe Diniz da Costa</a> 教授来访大连理工大学并做客 CGTN RADIO 访谈。</span><span class="lang-en"><a href="https://chemeng.uq.edu.au/profile/7851/joe-diniz-da-costa">Prof. Joe Diniz da Costa</a>, academic mentor of my PhD supervisor, visited DUT and joined a CGTN RADIO interview.</span></li>
   <li><strong>2025.10</strong> — <span class="lang-zh">成果入选教育部 2025 年春晖海外青年优秀成果。</span><span class="lang-en">Selected for the 2025 Chunhui Overseas Young Excellent Achievement Collection (Ministry of Education of China).</span></li>
   <li><strong>2025.09</strong> — <span class="lang-zh">获得博士研究生国家奖学金。</span><span class="lang-en">Awarded the National Scholarship for Doctoral Students.</span></li>

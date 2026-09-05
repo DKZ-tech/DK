@@ -89,7 +89,7 @@ redirect_from:
   <table class="cv-table">
     <tbody>
       <tr><td class="year">2025 – 2026</td><td><strong><span class="lang-zh">东京科学大学（原东京工业大学）Cross 实验室</span><span class="lang-en">Cross Laboratory, Institute of Science Tokyo</span></strong><br><span class="lang-zh">联合培养博士生，导师：Jeffrey S. Cross 教授。资助：国家公派留学（CSC）。</span><span class="lang-en">Joint PhD student supervised by Prof. Jeffrey S. Cross. Funded by the China Scholarship Council (CSC).</span></td></tr>
-      <tr><td class="year">2026.08 – 2027.02</td><td><strong><span class="lang-zh">卢森堡大学</span><span class="lang-en">University of Luxembourg</span></strong><br><span class="lang-zh">联合培养博士生（6 个月）。资助：大连理工大学"连理全球"留学专项。</span><span class="lang-en">Joint PhD research visit (6 months). Funded by the DUT Global Vision Project.</span></td></tr>
+      <tr><td class="year">2026.09 – 2027.02</td><td><strong><span class="lang-zh">卢森堡大学</span><span class="lang-en">University of Luxembourg</span></strong><br><span class="lang-zh">联合培养博士生（6 个月）。资助：大连理工大学"连理全球"留学专项。</span><span class="lang-en">Joint PhD research visit (6 months). Funded by the DUT Global Vision Project.</span></td></tr>
     </tbody>
   </table>
 </div>
