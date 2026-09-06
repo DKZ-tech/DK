@@ -117,7 +117,7 @@ redirect_from:
   {% endif %}
   <ul>
     <li><span class="lang-zh">期刊论文</span><span class="lang-en">Journal articles</span>: <strong>11</strong> <span class="lang-zh">篇</span><span class="lang-en">papers</span>（<span class="lang-zh">其中第一作者 / 共一</span><span class="lang-en">incl. first/co-first author</span> 5 <span class="lang-zh">篇</span><span class="lang-en">papers</span>）</li>
-    <li><span class="lang-zh">专利</span><span class="lang-en">Patents</span>: <strong>8</strong> <span class="lang-zh">项</span><span class="lang-en">patents</span>（<span class="lang-zh">含发明专利申请与实用新型</span><span class="lang-en">including invention applications and utility models</span>）</li>
+    <li><span class="lang-zh">专利</span><span class="lang-en">Patents</span>: <strong>9</strong> <span class="lang-zh">项</span><span class="lang-en">patents</span>（<span class="lang-zh">含已授权发明专利、实用新型与申请公布</span><span class="lang-en">granted invention patents, utility models and published applications</span>）</li>
     <li><span class="lang-zh">软件著作权</span><span class="lang-en">Software copyrights</span>: <strong>2</strong> <span class="lang-zh">项</span><span class="lang-en">items</span></li>
     <li><span class="lang-zh">团体标准</span><span class="lang-en">Group standards</span>: <strong>1</strong> <span class="lang-zh">项（参编）</span><span class="lang-en">(participating drafter)</span></li>
     <li><span class="lang-zh">科技成果转化</span><span class="lang-en">Technology transfer</span>: <strong>1</strong> <span class="lang-zh">项，成果转让金额 40 万元</span><span class="lang-en">patent transfer, RMB 400,000</span></li>

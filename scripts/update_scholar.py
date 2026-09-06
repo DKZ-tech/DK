@@ -215,6 +215,10 @@ def write_publication(pub: dict, dry_run: bool) -> bool:
     fname = f"pub-{pub['cluster_id']}.md"
     path = PUB_DIR / fname
     extra = parse_existing(path)
+    # 手工标记：条目已人工核对/中文化，跳过同步避免覆盖
+    if str(extra.get("manual", "")).lower() == "true":
+        print(f"    [跳过] {fname}（manual: true，保留手工内容）")
+        return False
     content = build_front_matter(pub, extra) + "\n" + BODY_TEMPLATE.format(paperurl=pub["paperurl"])
     if path.exists() and path.read_text(encoding="utf-8") == content:
         return False
