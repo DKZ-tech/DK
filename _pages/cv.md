@@ -117,7 +117,7 @@ redirect_from:
   {% endif %}
   <ul>
     <li><span class="lang-zh">期刊论文</span><span class="lang-en">Journal articles</span>: <strong>11</strong> <span class="lang-zh">篇</span><span class="lang-en">papers</span>（<span class="lang-zh">其中第一作者 / 共一</span><span class="lang-en">incl. first/co-first author</span> 5 <span class="lang-zh">篇</span><span class="lang-en">papers</span>）</li>
-    <li><span class="lang-zh">专利</span><span class="lang-en">Patents</span>: <strong>9</strong> <span class="lang-zh">项</span><span class="lang-en">patents</span>（<span class="lang-zh">含已授权发明专利、实用新型与申请公布</span><span class="lang-en">granted invention patents, utility models and published applications</span>）</li>
+    <li><span class="lang-zh">专利</span><span class="lang-en">Patents</span>: <strong>8</strong> <span class="lang-zh">项</span><span class="lang-en">patents</span>（<span class="lang-zh">含已授权发明专利、实用新型与申请公布</span><span class="lang-en">granted invention patents, utility models and published applications</span>）</li>
     <li><span class="lang-zh">软件著作权</span><span class="lang-en">Software copyrights</span>: <strong>2</strong> <span class="lang-zh">项</span><span class="lang-en">items</span></li>
     <li><span class="lang-zh">团体标准</span><span class="lang-en">Group standards</span>: <strong>1</strong> <span class="lang-zh">项（参编）</span><span class="lang-en">(participating drafter)</span></li>
     <li><span class="lang-zh">科技成果转化</span><span class="lang-en">Technology transfer</span>: <strong>1</strong> <span class="lang-zh">项，成果转让金额 40 万元</span><span class="lang-en">patent transfer, RMB 400,000</span></li>
@@ -228,14 +228,6 @@ redirect_from:
       <tr><td class="year">2024</td><td><strong><span class="lang-zh">科技成果转化现金奖励（2 万元）</span></strong><br><span class="lang-en">Cash incentive for technology transfer (RMB 20,000), Dalian University of Technology.</span></td></tr>
     </tbody>
   </table>
-</div>
-
-<div class="cv-section">
-  <h2><span class="lang-zh">技术服务与学术兼职</span><span class="lang-en">Service & Professional Activities</span></h2>
-  <ul>
-    <li><span class="lang-zh">团体标准 T/CITS 242-2025《基于高温热解气化的垃圾制氢技术要求》起草人（中国检验检测学会）。</span><span class="lang-en">Drafter of group standard T/CITS 242-2025, China Inspection and Testing Society.</span></li>
-    <li><span class="lang-zh">同行评审：Chemical Engineering Research and Design、Separation and Purification Technology、Applied Thermal Engineering、Journal of Cleaner Production 等期刊审稿人。</span><span class="lang-en">Peer reviewer for Chemical Engineering Research and Design, Separation and Purification Technology, Applied Thermal Engineering, Journal of Cleaner Production, and related journals.</span></li>
-  </ul>
 </div>
 
 <div class="cv-section">
