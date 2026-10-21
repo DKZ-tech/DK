@@ -55,6 +55,8 @@ redirect_from:
 <h2><span class="lang-zh">近期动态</span><span class="lang-en">Recent News</span></h2>
 
 <ul>
+  <li><strong>2026.07</strong> — <span class="lang-zh">参加沈阳"2026 年固体废物绿色发展交流会"（中华环保联合会主办）并作口头报告。</span><span class="lang-en">Attended the 2026 Green Development Exchange on Solid Waste in Shenyang (All-China Environmental Federation) and delivered an oral presentation.</span></li>
+  <li><strong>2026.06</strong> — <span class="lang-zh">参加首届环境纳米技术国际研讨会（ISEN 2026，大连）并获最佳墙报奖。</span><span class="lang-en">Attended the First International Symposium on Environmental Nanotechnology (ISEN 2026, Dalian) and received the Best Poster Award.</span></li>
   <li><strong>2026.09</strong> — <span class="lang-zh">获得大连理工大学博士生卓越奖学金、研究生单项奖（智育单项）。</span><span class="lang-en">Awarded the Doctoral Excellence Scholarship and the Graduate Individual Scholarship (Academic Excellence) at Dalian University of Technology.</span></li>
   <li><strong>2026.09</strong> — <span class="lang-zh">即将赴卢森堡大学开展为期 6 个月的联合培养（获大连理工大学"连理全球"留学专项资助）。</span><span class="lang-en">Starting a 6-month joint PhD research visit at the University of Luxembourg, funded by the DUT Global Vision Project.</span></li>
   <li><strong>2026.04</strong> — <span class="lang-zh">导师的导师 <a href="https://chemeng.uq.edu.au/profile/7851/joe-diniz-da-costa">Joe Diniz da Costa</a> 教授来访大连理工大学并做客 CGTN RADIO 访谈。</span><span class="lang-en"><a href="https://chemeng.uq.edu.au/profile/7851/joe-diniz-da-costa">Prof. Joe Diniz da Costa</a>, academic mentor of my PhD supervisor, visited DUT and joined a CGTN RADIO interview.</span></li>
