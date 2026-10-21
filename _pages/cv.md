@@ -70,7 +70,6 @@ redirect_from:
     <tbody>
       <tr><td class="year">2023 – <span class="lang-zh">今</span><span class="lang-en">Now</span></td><td><strong><span class="lang-zh">大连理工大学</span><span class="lang-en">Dalian University of Technology</span></strong><br><span class="lang-zh">环境科学与工程，博士（预计 2027 年毕业），导师：姬国钊 教授</span><span class="lang-en">Ph.D. in Environmental Science and Engineering (expected 2027). Supervisor: Prof. Guozhao Ji</span></td></tr>
       <tr><td class="year">2020 – 2023</td><td><strong><span class="lang-zh">中央民族大学</span><span class="lang-en">Minzu University of China</span></strong><br><span class="lang-zh">环境科学与工程，硕士</span><span class="lang-en">M.S. in Environmental Science and Engineering</span></td></tr>
-      <tr><td class="year">2013 – 2017</td><td><strong><span class="lang-zh">辽宁石油化工大学</span><span class="lang-en">Liaoning Petrochemical University</span></strong><br><span class="lang-zh">石油工程，学士</span><span class="lang-en">B.S. in Petroleum Engineering</span></td></tr>
     </tbody>
   </table>
 </div>

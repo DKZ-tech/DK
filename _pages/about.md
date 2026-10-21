@@ -49,10 +49,6 @@ redirect_from:
       <td><strong>2020 – 2023</strong></td>
       <td><span class="lang-zh">中央民族大学 · 环境科学与工程 · 硕士</span><span class="lang-en">Minzu University of China · Environmental Science and Engineering · M.S.</span></td>
     </tr>
-    <tr>
-      <td><strong>2013 – 2017</strong></td>
-      <td><span class="lang-zh">辽宁石油化工大学 · 石油工程 · 学士</span><span class="lang-en">Liaoning Petrochemical University · Petroleum Engineering · B.S.</span></td>
-    </tr>
   </tbody>
 </table>
 
