@@ -13,10 +13,9 @@ title                    : "张东宽 / Dongkuan Zhang"
 title_separator          : "-"
 name                     : &name "Dongkuan Zhang (张东宽)"
 description              : &description "Dongkuan Zhang's academic homepage - intelligent multiphase flow modeling for waste incineration (CFD + AI). 张东宽的个人学术主页：面向废弃物焚烧的智能多相流建模（CFD + AI）。"
-url                      : https://dkz-tech.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "/DK" # the subpath of your site, e.g. "/blog"
-repository               : "dkz-tech/DK"
+url                      : https://dkzhang.cn
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "dkz-tech/dkz-tech.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
