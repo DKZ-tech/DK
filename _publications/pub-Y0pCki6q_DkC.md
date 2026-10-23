@@ -7,7 +7,7 @@ date: 2025-01-01
 venue: 'Applied Thermal Engineering, 127937'
 authors: 'J Yang, D Zhang, L Liu, Y Xie, Y Du, A Li, C Qin, G Ji'
 paperurl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_R1WLLgAAAAJ&citation_for_view=_R1WLLgAAAAJ:Y0pCki6q_DkC"
-citation_count: 5
+citation_count: 6
 scholar_id: "Y0pCki6q_DkC"
 ---
 

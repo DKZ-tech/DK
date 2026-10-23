@@ -8,7 +8,6 @@ venue: 'Chemical Engineering Research and Design'
 authors: 'D Zhang, T Ren, Y Liu, M Li, J Yang, J Dai, J Li, JS Cross, G Ji'
 paperurl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_R1WLLgAAAAJ&citation_for_view=_R1WLLgAAAAJ:LkGwnXOMwfcC"
 citation_count: 0
-selected: true
 scholar_id: "LkGwnXOMwfcC"
 ---
 

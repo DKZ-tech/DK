@@ -55,6 +55,16 @@ HEADERS = {
 # 手工维护的分类规则：venue（期刊/专利号）匹配到正则即归入对应类别
 PATENT_RE = re.compile(r"\bCN\d{9,}(?:\.\d|[A-Z]\d?)?", re.IGNORECASE)
 
+# 已手工维护、不需要脚本生成的 Scholar cluster ID。
+# 这些成果在 _publications/ 下有专门的中英双语条目（文件名不带 pub- 前缀），
+# 若让脚本生成，会产生重复条目且分类/作者串常被 Scholar 页面噪声污染。
+SKIP_CLUSTER_IDS = {
+    "2osOgNQ5qMEC",   # 一种垃圾焚烧炉内自降飞灰的装置、方法及应用（发明专利）
+    "roLk4NBRz8UC",   # 一种垃圾焚烧炉内自降飞灰的装置（实用新型）
+    "Se3iqnhoufwC",   # 一种外混式双流体雾化喷枪
+    "UebtZRa9Y70C",   # 一种双喷枪自清洁喷雾系统
+}
+
 # front matter 中由脚本管理的字段（手工添加的其他字段会被保留）
 MANAGED_FIELDS = [
     "title", "collection", "category", "permalink", "date",
@@ -267,7 +277,12 @@ def main():
 
     print(f"[3/3] 生成/更新 {len(pubs)} 个成果文件 -> _publications/")
     changed = 0
+    skipped = 0
     for pub in pubs:
+        if pub["cluster_id"] in SKIP_CLUSTER_IDS:
+            skipped += 1
+            print(f"  [跳过] {pub['title'][:60]}（手工维护条目）")
+            continue
         fname = f"pub-{pub['cluster_id']}.md"
         existed = (PUB_DIR / fname).exists()
         if write_publication(pub, args.dry_run):
@@ -276,6 +291,8 @@ def main():
             year = pub["year"] or "????"
             print(f"  {flag} {year} {pub['title'][:60]}{'…' if len(pub['title']) > 60 else ''}")
     print(f"共 {changed} 个文件有变化（其余无变化，保持原样）。")
+    if skipped:
+        print(f"共 {skipped} 条已在 SKIP_CLUSTER_IDS 中，未生成重复文件。")
 
     write_stats(parse_stats(stats_html), args.dry_run)
 

@@ -4,6 +4,7 @@ _site/
 
 # Ignore the directory for local files during development
 local/
+.venv/
 
 # Ignore the Gemfile that is generated
 Gemfile.lock
