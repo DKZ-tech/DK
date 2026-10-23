@@ -9,10 +9,6 @@ redirect_from:
 <p class="lang-zh">欢迎来到我的个人学术主页！我是<strong>张东宽</strong>，大连理工大学环境学院博士生，导师为<a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">姬国钊教授</a>。2025 年起，我在日本东京科学大学（原东京工业大学）Cross 实验室进行为期一年的联合培养，接受 <a href="https://zh.clab-tokyotech.org/">Jeffrey S. Cross 教授</a>的指导。</p>
 <p class="lang-en">Welcome to my academic homepage! I am <strong>Dongkuan Zhang</strong>, a PhD student at the School of Environmental Science and Engineering, Dalian University of Technology, supervised by <a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">Prof. Guozhao Ji</a>. Since 2025, I have been a joint PhD student in the <a href="https://zh.clab-tokyotech.org/">Cross Laboratory</a> at the Institute of Science Tokyo (formerly Tokyo Institute of Technology) under the supervision of Prof. Jeffrey S. Cross.</p>
 
-<div class="home-figure">
-  <img src="{{ '/images/g0.gif' | relative_url }}" loading="lazy" alt="Research animation: CFD + AI">
-</div>
-
 <h2><span class="lang-zh">研究方向</span><span class="lang-en">Research Interests</span></h2>
 
 <p class="lang-zh">我的研究方向是<strong>面向废弃物焚烧技术的智能多相流建模</strong>，将基于物理机理的 CFD 数值模拟与人工智能驱动的流场预测相结合。目前，我正在开发用于蒸馏残渣燃烧的焚烧炉智能多相流模型，致力于推动工业过程向更加清洁、智能和可持续的方向发展。</p>
@@ -54,15 +50,11 @@ redirect_from:
 <h2><span class="lang-zh">近期动态</span><span class="lang-en">Recent News</span></h2>
 
 <ul>
+  <li><strong>2026.09</strong> — <span class="lang-zh">即将赴卢森堡大学开展为期 6 个月的联合培养（获大连理工大学"连理全球"留学专项资助）。</span><span class="lang-en">Starting a 6-month joint PhD research visit at the University of Luxembourg, funded by the DUT Global Vision Project.</span></li>
+  <li><strong>2026.09</strong> — <span class="lang-zh">获得大连理工大学博士生卓越奖学金、研究生单项奖（智育单项）。</span><span class="lang-en">Awarded the Doctoral Excellence Scholarship and the Graduate Individual Scholarship (Academic Excellence) at Dalian University of Technology.</span></li>
   <li><strong>2026.07</strong> — <span class="lang-zh">参加沈阳"2026 年固体废物绿色发展交流会"（中华环保联合会主办）并作口头报告。</span><span class="lang-en">Attended the 2026 Green Development Exchange on Solid Waste in Shenyang (All-China Environmental Federation) and delivered an oral presentation.</span></li>
   <li><strong>2026.06</strong> — <span class="lang-zh">参加首届环境纳米技术国际研讨会（ISEN 2026，大连）并获最佳墙报奖。</span><span class="lang-en">Attended the First International Symposium on Environmental Nanotechnology (ISEN 2026, Dalian) and received the Best Poster Award.</span></li>
-  <li><strong>2026.09</strong> — <span class="lang-zh">获得大连理工大学博士生卓越奖学金、研究生单项奖（智育单项）。</span><span class="lang-en">Awarded the Doctoral Excellence Scholarship and the Graduate Individual Scholarship (Academic Excellence) at Dalian University of Technology.</span></li>
-  <li><strong>2026.09</strong> — <span class="lang-zh">即将赴卢森堡大学开展为期 6 个月的联合培养（获大连理工大学"连理全球"留学专项资助）。</span><span class="lang-en">Starting a 6-month joint PhD research visit at the University of Luxembourg, funded by the DUT Global Vision Project.</span></li>
   <li><strong>2026.04</strong> — <span class="lang-zh">导师的导师 <a href="https://chemeng.uq.edu.au/profile/7851/joe-diniz-da-costa">Joe Diniz da Costa</a> 教授来访大连理工大学并做客 CGTN RADIO 访谈。</span><span class="lang-en"><a href="https://chemeng.uq.edu.au/profile/7851/joe-diniz-da-costa">Prof. Joe Diniz da Costa</a>, academic mentor of my PhD supervisor, visited DUT and joined a CGTN RADIO interview.</span></li>
-  <li><strong>2025.10</strong> — <span class="lang-zh">成果入选教育部 2025 年春晖海外青年优秀成果。</span><span class="lang-en">Selected for the 2025 Chunhui Overseas Young Excellent Achievement Collection (Ministry of Education of China).</span></li>
-  <li><strong>2025.09</strong> — <span class="lang-zh">获得博士研究生国家奖学金。</span><span class="lang-en">Awarded the National Scholarship for Doctoral Students.</span></li>
-  <li><strong>2024.12</strong> — <span class="lang-zh">被评为"环境工程之星"。</span><span class="lang-en">Awarded the title of "Environmental Engineering Star".</span></li>
-  <li><strong>2024.11</strong> — <span class="lang-zh">在 2024 韩中日能源环境联合研讨会上获优秀报告奖。</span><span class="lang-en">Received the Excellent Presentation Award at the 2024 Korea-China-Japan Joint Symposium on Energy and Environment.</span></li>
 </ul>
 
 <p><a href="{{ '/year-archive/' | relative_url }}"><i class="fa fa-arrow-right" aria-hidden="true"></i> <span class="lang-zh">查看全部动态</span><span class="lang-en">See all moments</span></a></p>

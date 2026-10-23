@@ -146,8 +146,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "og-card.png"  # Social media default site image
+og_description           : "Dongkuan Zhang (张东宽) — PhD student at Dalian University of Technology working on intelligent multiphase flow modeling for waste incineration (CFD + AI)."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

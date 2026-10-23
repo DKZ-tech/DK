@@ -16,6 +16,7 @@ doi: 10.7652/xjtuxb202512007
 manual: true
 paperurl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_R1WLLgAAAAJ&citation_for_view=_R1WLLgAAAAJ:eQOLeE2rZwMC"
 citation_count: 0
+selected: true
 scholar_id: "eQOLeE2rZwMC"
 ---
 

@@ -8,6 +8,7 @@ venue: 'Renewable and Sustainable Energy Reviews 221, 115895'
 authors: 'D Zhang, T Anjum, Z Chu, JS Cross, G Ji'
 paperurl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_R1WLLgAAAAJ&citation_for_view=_R1WLLgAAAAJ:Tyk-4Ss8FVUC"
 citation_count: 39
+selected: true
 scholar_id: "Tyk-4Ss8FVUC"
 ---
 

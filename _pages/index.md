@@ -7,6 +7,8 @@ author_profile: false
 
 {% include base_path %}
 
+{% assign selected = site.publications | where: 'selected', true | sort: 'date' | reverse %}
+
 <div class="landing">
 
   <section class="landing__hero">
@@ -21,8 +23,8 @@ author_profile: false
         <span class="lang-en">PhD Student, School of Environmental Science &amp; Engineering, Dalian University of Technology</span>
       </p>
       <p class="landing__tagline">
-        <span class="lang-zh">面向废弃物焚烧的智能多相流建模：用 CFD 与人工智能耦合，让工业燃烧过程更清洁、更可控。</span>
-        <span class="lang-en">Intelligent multiphase flow modeling for waste incineration — coupling CFD with machine learning to make industrial combustion cleaner and more controllable.</span>
+        <span class="lang-zh">工业焚烧炉里的高盐残渣常常烧不透，喷嘴也总是堵。我想用 CFD 加神经网络，让这类劣质燃料的流动与燃烧变得可预测、可预警、可优化。</span>
+        <span class="lang-en">High-salt residues inside industrial incinerators often burn incompletely, and the nozzles keep clogging. I use CFD together with neural networks to make the flow and combustion of such difficult fuels predictable, warnable and optimizable.</span>
       </p>
 
       <ul class="landing__contact">
@@ -34,6 +36,44 @@ author_profile: false
       </ul>
     </div>
   </section>
+
+  <section class="landing__section">
+    <h2 class="landing__heading">
+      <span class="lang-zh">精选成果</span><span class="lang-en">Selected Work</span>
+    </h2>
+
+    <ul class="landing__work">
+      {% for pub in selected %}
+      <li class="landing__work-item">
+        <a class="landing__work-title" href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        <div class="landing__work-meta">
+          <span class="landing__journal">{{ pub.venue }}</span>
+          {% if pub.citation_count and pub.citation_count > 0 %}
+            <span class="landing__cites">
+              <span class="lang-zh">被引 {{ pub.citation_count }}</span>
+              <span class="lang-en">{{ pub.citation_count }} citations</span>
+            </span>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p class="landing__more">
+      <a href="{{ '/publications/' | relative_url }}">
+        <span class="lang-zh">全部论文、专利与软件著作权 →</span>
+        <span class="lang-en">All publications, patents and software →</span>
+      </a>
+    </p>
+  </section>
+
+  <figure class="landing__figure">
+    <img src="{{ '/images/g0.gif' | relative_url }}" alt="Research animation: CFD coupled with neural networks">
+    <figcaption>
+      <span class="lang-zh">CFD 与神经网络耦合的智能多相流建模流程</span>
+      <span class="lang-en">Intelligent multiphase flow modeling: coupling CFD with neural networks</span>
+    </figcaption>
+  </figure>
 
   <nav class="landing__cards" aria-label="Site sections">
 
