@@ -9,13 +9,14 @@
 
 | 我想做什么 | 怎么做 |
 |---|---|
+| 改首页（姓名、机构、联系方式、导航、指标条） | 编辑 `_pages/index.md` |
 | 同步 Google Scholar 论文 | 仓库根目录运行 `python scripts/update_scholar.py`，然后提交推送 |
 | 发一条新动态 | 在 `_posts/` 复制任意现有文件，改文件名/日期/内容 |
-| 改首页介绍 | 编辑 `_pages/about.md` |
-| 改简历 | 编辑 `_pages/cv.md`（章节化结构，新增内容参考 §六） |
+| 改个人简介 | 编辑 `_pages/about.md` |
+| 改简历 | 编辑 `_pages/cv.md`（章节化结构，新增内容参考 §八） |
 | 换头像 | 覆盖 `images/profile1.jpg`（文件名不变最省事） |
-| 加一条手工成果（软著 / 标准 / 专利申请号不在 Scholar 的） | 在 `_publications/` 新建一个 `.md`，见 §五 |
-| 新增 / 修改科研项目 | 编辑 `_data/projects.yml`，见 §六 |
+| 加一条手工成果（软著 / 标准 / 专利） | 在 `_publications/` 新建一个 `.md`，见 §六 |
+| 新增 / 修改科研项目 | 编辑 `_data/projects.yml`，见 §七 |
 | 替换/上传简历 PDF | 覆盖 `assets/cv/CV_Dongkuan_Zhang.pdf`（CV 页会自动出现"下载 PDF"按钮） |
 
 ---
@@ -50,6 +51,34 @@ python scripts/update_scholar.py --user XXXX # 换一个 Scholar 账号
 - **若提示触发验证码**（HTTP 429/403 或解析不到成果）：Google 对频繁抓取有限制，等几小时再跑即可；平时 1–2 个月跑一次完全没问题。
 - 想给某篇论文补充中文译名或 DOI：直接编辑对应的 `pub-*.md`，在 front matter 中加一行
   `title_zh: '中文标题'` 或 `doi: '10.xxxx/xxxxx'`——脚本更新时会**保留**这些手工字段。
+
+### 专利：不要在 Scholar 侧同步，一律手工维护
+
+专利在 Google Scholar 上的记录不稳定：`venue` 字段通常为空（专利没有期刊名），
+作者串容易粘连成 `张东宽姬国钊、` 这种断句错误，分类也会被误判成期刊论文。
+如果让脚本照抓，`/publications/` 会多出若干条**空期刊名的假论文**，并让
+「11 篇期刊论文」这类统计口径失真。
+
+因此本站的专利与软著、标准一样，全部在 `_publications/` 下手工维护
+（文件名不带 `pub-` 前缀，模板见第六节）。脚本对它们无能为力，也不会误删。
+
+**例外机制**：手工条目已经存在、而 Scholar 上也有对应记录的成果，需要把它的
+cluster ID 写进 `scripts/update_scholar.py` 的 `SKIP_CLUSTER_IDS`，否则每次同步
+都会重新生成一份重复条目。当前名单：
+
+```python
+SKIP_CLUSTER_IDS = {
+    "2osOgNQ5qMEC",   # 自降飞灰装置、方法及应用（发明专利）
+    "roLk4NBRz8UC",   # 自降飞灰装置（实用新型）
+    "Se3iqnhoufwC",   # 外混式双流体雾化喷枪
+    "UebtZRa9Y70C",   # 双喷枪自清洁喷雾系统
+}
+```
+
+**新增专利时的推荐顺序**：先在 `_publications/` 建好双语条目 → 再去 Scholar
+确认它的 cluster ID（成果链接里 `citation_for_view=...:<ID>` 冒号后的那串）→
+把 ID 加进 `SKIP_CLUSTER_IDS`。同步完成后检查 `git diff`，确认没有多出
+`pub-<新ID>.md` 文件。
 
 ---
 
@@ -113,21 +142,28 @@ permalink: /posts/2026/05/new-award/
 ## 五、目录结构
 
 ```
-├─ _pages/            页面：首页 about.md、论文 publications.html、动态 year-archive.html、简历 cv.md、404
+├─ _pages/            页面：首页 index.md、简介 about.md、论文 publications.html、动态 year-archive.html、简历 cv.md、404
 ├─ _posts/            动态（Moments）文章
 ├─ _publications/     成果条目
 │   ├─ pub-*.md         ← scripts/update_scholar.py 自动生成，勿手工改名
-│   └─ 2025-*-*.md      ← 手工维护（软著、标准）
+│   └─ 2025-*-*.md      ← 手工维护（专利、软著、标准）
 ├─ _data/
 │   ├─ scholar.yml      ← 脚本生成的引用统计，勿手工编辑
 │   ├─ navigation.yml   ← 导航栏菜单
 │   └─ projects.yml     ← 科研项目列表（手工维护）
-├─ images/            图片与头像（头像为 profile1.jpg）
+├─ _layouts/          布局：splash（首页无侧栏）、archive、single
+├─ _sass/             主题与字体变量（_themes.scss 控制全局字体）
+├─ images/            图片与头像（头像为 profile1.jpg；og-card.png 为分享预览图）
+├─ assets/css/main.scss ← 全站样式，末尾为首页与纸色页面（paper-page）的定制
 ├─ scripts/
 │   └─ update_scholar.py ← Google Scholar 一键同步脚本
 ├─ _includes/         模板片段（语言按钮、论文条目渲染等）
-├─ _config.yml        站点主配置（姓名、邮箱、各类学术主页链接）
+├─ _config.yml        站点主配置（姓名、邮箱、各类学术主页链接、OG 分享图）
 ```
+
+**首页与内页的样式分工**：`_pages/index.md` 用 `layout: splash`（无侧栏、全宽），
+其他页面若在前言写 `body_class: paper-page`，会套用同一套暖纸色背景与衬线标题。
+新增页面想保持一致，照抄这一行即可。
 
 ## 六、手工新增一条成果（专利 / 软著 / 标准）
 
@@ -181,7 +217,7 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 
 ---
 
-## 六、新增 / 修改科研项目
+## 七、新增 / 修改科研项目
 
 论文成果页（`/publications/`）右侧现在按分类展示，左侧有 sticky 导航。其中「科研项目」板块读取 `_data/projects.yml`。
 
@@ -207,7 +243,7 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 
 ---
 
-## 七、修改 / 扩展简历页（`cv.md`）
+## 八、修改 / 扩展简历页（`cv.md`）
 
 `_pages/cv.md` 的结构（直接编辑 markdown）：
 
@@ -293,23 +329,28 @@ authors: '<span class="lang-zh">姬国钊, 张东宽</span><span class="lang-en"
 
 ---
 
-## 八、修改个人信息
+## 九、修改个人信息
 
 `_config.yml` 顶部 `author:` 一节集中管理：头像、姓名、简介、所在地、单位、邮箱、
 Google Scholar / ORCID / GitHub 等链接——想加 ResearchGate、领英等，填上对应字段即可，侧栏会自动出现图标。
 
-### 修改微信二维码 / 微信号
+### 修改微信号
 
-- 微信二维码图片：`images/weixin-qr.jpg`（建议用微信「我 → 二维码名片」截图，替换此文件即可，保持不倾斜、二维码居中）。
-- 微信号：修改 `_config.yml` 中 `author.wechat` 的值，并同步修改 `_pages/about.md` 中两处 `DK-techie`（图片下方的大字和复制按钮的 `data-clipboard-text`）。
-- 首页的联系卡片和左侧边栏都会自动使用新微信号。
+首页与简介页都已不再使用微信二维码，只保留一行微信号文字（简介页右下角带复制按钮）。
 
-## 九、本地预览（已配置好）
+- 微信号：修改 `_config.yml` 中 `author.wechat` 的值（左侧边栏读取此字段）；
+- 同步修改 `_pages/about.md` 联系方式列表里的 `DK-techie`，**以及同一个 `<button>` 上的
+  `data-copy="DK-techie"` 属性**——文字改了而 `data-copy` 没改，复制按钮就会复制出旧号码。
+- `images/weixin-qr.jpg` 已不再被任何页面引用，可以保留备用，也可以删除。
 
-本机已安装 Ruby 3.1.4 + DevKit 到 **`E:\Ruby`**，依赖也已装好。两种方式：
+## 十、本地预览
 
-**方式一（最简单）**：双击仓库根目录的 `serve_local.bat`，浏览器打开
-<http://127.0.0.1:4000/DK/>，Ctrl+C 关闭。
+> 本节描述的是旧机器的环境，**当前开发机未安装 Ruby/Jekyll**，以下路径仅供参考。
+> 在装好 Ruby 的机器上按下面的步骤即可；没有本地环境时，直接 push 后在线上检查。
+
+旧环境：Ruby 3.1.4 + DevKit 装在 **`E:\Ruby`**，项目位于 `D:\Github_projects\DK`。
+
+**方式一**：双击 `serve_local.bat`，浏览器打开 <http://127.0.0.1:4000/DK/>。
 
 **方式二（命令行）**：打开 "Start Command Prompt with Ruby"（开始菜单，装 Ruby 时自带）：
 
@@ -325,15 +366,18 @@ bundle exec jekyll serve
 > 若以后新增 gem 需要编译，务必通过 `ridk enable` 环境执行 `bundle install`，
 > 否则会报 `ruby.h: No such file or directory` 或临时目录权限错误。
 
-## 十、常见问题
+## 十一、常见问题
 
 - **推送后网站没更新**：等 1–2 分钟；若仍不行，到仓库 Settings → Pages 查看构建错误，或 Actions/Pages 构建日志。
 - **某篇论文信息不对**：先去 Google Scholar 修正资料，再跑一次同步脚本。
+- **同步后论文数突然变多**：多半是 Scholar 上的专利被重新抓成了 `pub-*.md`。把对应 cluster ID
+  加进 `scripts/update_scholar.py` 的 `SKIP_CLUSTER_IDS`，再删掉多出来的文件（见 §二）。
+- **单篇引用加起来少于总数**：正常。Scholar 的总被引包含没有被单列建条目的成果。
 - **语言切换按钮没反应**：清浏览器缓存；确认 `assets/js/language-toggle.js` 存在且 `_includes/scripts.html` 中有引用。
 
 ---
 
-## 十一、图片上传与压缩建议
+## 十二、图片上传与压缩建议
 
 本站所有图片已经过响应式处理：
 
