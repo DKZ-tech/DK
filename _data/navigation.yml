@@ -4,6 +4,9 @@ main:
   - title: '<span class="lang-zh">首页</span><span class="lang-en">Home</span>'
     url: /
 
+  - title: '<span class="lang-zh">简介</span><span class="lang-en">About</span>'
+    url: /about/
+
   - title: '<span class="lang-zh">论文成果</span><span class="lang-en">Publications</span>'
     url: /publications/
 

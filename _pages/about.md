@@ -1,9 +1,8 @@
 ---
-permalink: /
-title: '<span class="lang-zh">首页 / </span><span class="lang-en">Home</span>'
+permalink: /about/
+title: '<span class="lang-zh">个人简介 / </span><span class="lang-en">About</span>'
 author_profile: true
 redirect_from:
-  - /about/
   - /about.html
 ---
 
