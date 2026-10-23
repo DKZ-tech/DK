@@ -8,15 +8,17 @@ body_class: paper-page
 
 {% include base_path %}
 
-{% assign selected = site.publications | where: 'selected', true | sort: 'date' | reverse %}
+{% assign manuscripts = site.publications | where: "category", "manuscripts" | size %}
+{% assign patents     = site.publications | where: "category", "patents" | size %}
+{% assign software    = site.publications | where: "category", "software" | size %}
 
 <div class="landing">
 
   <header class="landing__hero">
     <div class="landing__hero-text">
       <p class="landing__eyebrow">
-        <span class="lang-zh">环境工程 · 多相流建模</span>
-        <span class="lang-en">Environmental Engineering · Multiphase Flow Modeling</span>
+        <span class="lang-zh">环境工程 · 智能多相流建模</span>
+        <span class="lang-en">Environmental Engineering · Intelligent Multiphase Flow Modeling</span>
       </p>
 
       <h1 class="landing__name">
@@ -25,16 +27,16 @@ body_class: paper-page
 
       <p class="landing__role">
         <span class="lang-zh">大连理工大学 环境学院 · 博士研究生</span>
-        <span class="lang-en">PhD Student · School of Environmental Science &amp; Engineering<br>Dalian University of Technology</span>
+        <span class="lang-en">PhD Candidate · School of Environmental Science &amp; Engineering<br>Dalian University of Technology</span>
       </p>
 
       <p class="landing__tagline">
-        <span class="lang-zh">工业焚烧炉里的高盐残渣常常烧不透，喷嘴也总是堵。我用 CFD 与神经网络，让这类劣质燃料的流动与燃烧变得可预测、可预警、可优化。</span>
-        <span class="lang-en">High-salt residues in industrial incinerators often burn incompletely, and the nozzles keep clogging. I combine CFD with neural networks to make the flow and combustion of such difficult fuels predictable, warnable and optimizable.</span>
+        <span class="lang-zh">高盐有机釜残在焚烧炉里烧不透，喷嘴还总被非牛顿流体堵死。我用 CFD 与神经网络，把这类难处理工业废物的流动与燃烧，从"凭经验调"变成"可预测、可预警、可优化"。</span>
+        <span class="lang-en">High-salt organic still residues burn incompletely, and non-Newtonian fluids clog the spray nozzles. I combine CFD with neural networks to turn the flow and combustion of these difficult industrial wastes from rule-of-thumb operation into something predictable, warnable and optimizable.</span>
       </p>
 
       <ul class="landing__contact">
-        <li><a href="mailto:1159571393@qq.com">1159571393@qq.com</a></li>
+        <li><a href="mailto:dkz@mail.dlut.edu.cn">dkz@mail.dlut.edu.cn</a></li>
         <li><span>WeChat · DK-techie</span></li>
         <li><a href="https://scholar.google.com/citations?user=_R1WLLgAAAAJ&amp;hl=en">Google Scholar</a></li>
         <li><a href="https://orcid.org/0009-0000-4584-7246">ORCID</a></li>
@@ -46,35 +48,33 @@ body_class: paper-page
     </figure>
   </header>
 
-  <section class="landing__section">
-    <h2 class="landing__heading">
-      <span class="lang-zh">精选成果</span><span class="lang-en">Selected Work</span>
-    </h2>
+  <section class="landing__band">
+    <div class="landing__metrics">
+      <div class="landing__metric">
+        <span class="landing__metric-value">{{ manuscripts }}</span>
+        <span class="landing__metric-label"><span class="lang-zh">期刊论文</span><span class="lang-en">Papers</span></span>
+      </div>
+      <div class="landing__metric">
+        <span class="landing__metric-value">{{ patents }}</span>
+        <span class="landing__metric-label"><span class="lang-zh">授权专利</span><span class="lang-en">Patents</span></span>
+      </div>
+      <div class="landing__metric">
+        <span class="landing__metric-value">{{ software }}</span>
+        <span class="landing__metric-label"><span class="lang-zh">软件著作权</span><span class="lang-en">Software</span></span>
+      </div>
+      <div class="landing__metric">
+        <span class="landing__metric-value">{{ site.data.scholar.total_citations }}</span>
+        <span class="landing__metric-label"><span class="lang-zh">总被引</span><span class="lang-en">Citations</span></span>
+      </div>
+      <div class="landing__metric">
+        <span class="landing__metric-value">{{ site.data.scholar.h_index }}</span>
+        <span class="landing__metric-label">h-index</span>
+      </div>
+    </div>
 
-    <ol class="landing__index">
-      {% for pub in selected %}
-      <li class="landing__entry">
-        <div class="landing__entry-head">
-          <a class="landing__entry-title" href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
-        </div>
-        <p class="landing__entry-meta">
-          <span class="landing__venue">{{ pub.venue }}</span>
-          {% if pub.citation_count and pub.citation_count > 0 %}
-          <span class="landing__dot" aria-hidden="true">·</span>
-          <span class="lang-zh">被引 {{ pub.citation_count }}</span>
-          <span class="lang-en">cited {{ pub.citation_count }} times</span>
-          {% endif %}
-        </p>
-      </li>
-      {% endfor %}
-    </ol>
-
-    <p class="landing__more">
-      <a href="{{ '/publications/' | relative_url }}">
-        <span class="lang-zh">全部论文、专利与软件著作权</span>
-        <span class="lang-en">All publications, patents and software</span>
-        <span class="landing__arrow" aria-hidden="true">→</span>
-      </a>
+    <p class="landing__band-note">
+      <span class="lang-zh">三段联合培养：大连理工大学 · 东京科学大学（CSC 国家公派）· 卢森堡大学（连理全球专项）</span>
+      <span class="lang-en">Joint training at Dalian University of Technology · Institute of Science Tokyo (CSC) · University of Luxembourg (DUT Global Vision)</span>
     </p>
   </section>
 
@@ -89,7 +89,7 @@ body_class: paper-page
   <nav class="landing__sections" aria-label="Site sections">
     <a class="landing__row" href="{{ '/about/' | relative_url }}">
       <span class="landing__row-title"><span class="lang-zh">个人简介</span><span class="lang-en">About</span></span>
-      <span class="landing__row-desc"><span class="lang-zh">研究兴趣、教育经历与近期动态</span><span class="lang-en">Research interests, education and recent news</span></span>
+      <span class="landing__row-desc"><span class="lang-zh">培养经历、成果概览与研究兴趣</span><span class="lang-en">Training, output overview and research interests</span></span>
       <span class="landing__arrow" aria-hidden="true">→</span>
     </a>
     <a class="landing__row" href="{{ '/publications/' | relative_url }}">

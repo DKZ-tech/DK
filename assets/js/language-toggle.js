@@ -41,28 +41,28 @@
       });
     });
 
-    // Copy WeChat ID to clipboard on the homepage contact card
-    var copyBtn = document.querySelector('.copy-wechat-btn');
-    var feedback = document.getElementById('copy-feedback');
+    // Copy WeChat ID from a contact row (`data-copy`), with feedback slot
+    var copyBtn = document.querySelector('[data-copy]');
+    var feedback = document.querySelector('.copy-feedback');
     if (copyBtn) {
-      copyBtn.addEventListener('click', function () {
-        var text = copyBtn.getAttribute('data-clipboard-text') || '';
+      copyBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        var text = copyBtn.getAttribute('data-copy') || '';
         function show(ok) {
           if (!feedback) return;
           var isZh = document.documentElement.classList.contains('lang-zh');
           feedback.textContent = ok
-            ? (isZh ? '已复制到剪贴板' : 'Copied to clipboard')
-            : (isZh ? '复制失败，请手动选中复制' : 'Copy failed; please select and copy manually');
+            ? (isZh ? '已复制' : 'Copied')
+            : (isZh ? '复制失败，请手动选中' : 'Copy failed; select manually');
           feedback.className = 'copy-feedback ' + (ok ? 'copy-success' : 'copy-error');
           setTimeout(function () {
             feedback.textContent = '';
             feedback.className = 'copy-feedback';
-          }, 2500);
+          }, 2000);
         }
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(text).then(function () { show(true); }, function () { show(false); });
         } else {
-          // Fallback for older browsers / non-secure contexts
           try {
             var ta = document.createElement('textarea');
             ta.value = text;
