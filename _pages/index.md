@@ -31,8 +31,8 @@ body_class: paper-page
       </p>
 
       <p class="landing__tagline">
-        <span class="lang-zh">焚烧炉内部是一千度、不透明的黑箱：气固液多相湍流与热化学反应交织，几乎无法测量。我以 CFD 还原这场看不见的反应，再用神经网络把它压缩成毫秒级的预测——让废弃物焚烧从凭经验操作，走向可计算、可预警、可优化。</span>
-        <span class="lang-en">Inside an incinerator is a thousand-degree black box: gas–solid–liquid turbulence entangled with thermochemical reaction, almost impossible to measure. I reconstruct that invisible chemistry with CFD, then compress it with neural networks into millisecond-scale prediction — moving waste incineration from rule-of-thumb operation toward something computable, anticipatory and optimizable.</span>
+        <span class="lang-zh">废弃物焚烧的智能多相流与燃烧建模。以 CFD 与欧拉-拉格朗日方法求解多相流动、传热与热化学反应，以神经网络代理模型实现快速预测，服务于焚烧炉、循环流化床与双流体喷嘴的设计与优化。</span>
+        <span class="lang-en">Intelligent multiphase flow and combustion modeling for waste incineration. CFD and Eulerian–Lagrangian methods resolve multiphase flow, heat transfer and thermochemical reaction; neural-network surrogates deliver fast prediction, supporting the design and optimization of incinerators, circulating fluidized beds and twin-fluid nozzles.</span>
       </p>
 
       <ul class="landing__contact">

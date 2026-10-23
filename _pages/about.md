@@ -8,14 +8,14 @@ redirect_from:
 ---
 
 <div class="profile-lead">
-  <p class="lang-zh">我是<strong>张东宽</strong>，大连理工大学环境学院博士研究生，导师为<a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">姬国钊教授</a>，预计 2027 年毕业。我研究<strong>废弃物焚烧中的智能多相流与燃烧建模</strong>：以计算流体力学（CFD）还原炉内高温、不透明条件下的气固液多相流动与热化学反应，再以人工智能把高保真仿真转化为可实时响应的预测能力，为工业废物处理提供一条从经验走向计算的路径。</p>
-  <p class="lang-en">I am <strong>Dongkuan Zhang</strong>, a PhD candidate at the School of Environmental Science and Engineering, Dalian University of Technology, supervised by <a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">Prof. Guozhao Ji</a> (expected graduation 2027). I study <strong>intelligent multiphase flow and combustion modeling for waste incineration</strong>: using computational fluid dynamics (CFD) to reconstruct the gas–solid–liquid flow and thermochemical reaction inside an incinerator under conditions too hot and too opaque to observe, then applying AI to turn high-fidelity simulation into real-time predictive capability — charting a path for industrial waste treatment from experience toward computation.</p>
+  <p class="lang-zh"><strong>张东宽</strong>，大连理工大学环境科学与工程专业博士研究生（2023 年入学，预计 2027 年毕业），导师姬国钊教授。研究方向为废弃物焚烧的智能多相流与燃烧建模，方法涵盖 CFD 数值模拟、欧拉-拉格朗日多相流建模、多相热化学反应求解与神经网络代理模型。已在 <em>Renewable and Sustainable Energy Reviews</em>、<em>Applied Thermal Engineering</em>、<em>Chemical Engineering Research and Design</em> 等期刊发表论文 11 篇（第一作者 5 篇），获授权及公开专利 8 项、软件著作权 2 项，总被引 60 次。曾获博士研究生国家奖学金、大连理工大学博士生卓越奖学金；先后于东京科学大学（原东京工业大学）Cross 实验室（国家公派，CSC）与卢森堡大学 Ladewig 实验室开展联合培养。</p>
+  <p class="lang-en"><strong>Dongkuan Zhang</strong> is a PhD candidate in Environmental Science and Engineering at Dalian University of Technology (enrolled 2023, expected 2027), supervised by Prof. Guozhao Ji. His research is on intelligent multiphase flow and combustion modeling for waste incineration, spanning CFD simulation, Eulerian–Lagrangian multiphase modeling, multiphase thermochemical reaction solving and neural-network surrogates. He has published 11 journal articles (5 as first author) in journals including <em>Renewable and Sustainable Energy Reviews</em>, <em>Applied Thermal Engineering</em> and <em>Chemical Engineering Research and Design</em>, holds 8 patents and 2 software copyrights, and has 60 citations in total. He has received the National Scholarship for Doctoral Students and the DUT Doctoral Excellence Scholarship, and has conducted joint PhD research at the Cross Laboratory, Institute of Science Tokyo (CSC government-funded) and the Ladewig group, University of Luxembourg.</p>
 </div>
 
 <h2><span class="lang-zh">培养经历</span><span class="lang-en">Training</span></h2>
 
-<p class="lang-zh">我的学术训练横跨三个国家的研究组：大连理工大学打下多相流建模与实验的基础；东京科学大学（原东京工业大学）Cross 实验室让我进入过程系统工程与国际合作的环境；卢森堡大学 Ladewig 实验室则延伸到膜材料与表征。三段经历方法互补，指向同一个问题。</p>
-<p class="lang-en">My training spans research groups in three countries: Dalian University of Technology built the foundation in multiphase flow modeling and experimentation; the Cross Laboratory at Institute of Science Tokyo (formerly Tokyo Institute of Technology) brought me into process systems engineering and international collaboration; and the Ladewig group at the University of Luxembourg extends that work into membrane materials and characterization. The three stages are methodologically complementary and converge on one question.</p>
+<p class="lang-zh">博士期间先后于日本东京科学大学（原东京工业大学）Cross 实验室与卢森堡大学 Ladewig 实验室联合培养，分别由国家公派留学基金（CSC）与大连理工大学"连理全球"专项资助。</p>
+<p class="lang-en">During the PhD, joint research at the Cross Laboratory, Institute of Science Tokyo (formerly Tokyo Institute of Technology), and the Ladewig group, University of Luxembourg, funded by the China Scholarship Council (CSC) and the DUT Global Vision Project respectively.</p>
 
 <div class="timeline">
   <div class="timeline-item">
@@ -97,31 +97,49 @@ redirect_from:
   </div>
 </div>
 
+<h2><span class="lang-zh">荣誉与奖励</span><span class="lang-en">Selected Honors</span></h2>
+
+<ul class="news-list">
+  <li><strong>2026.09</strong><span class="lang-zh">大连理工大学博士生卓越奖学金；研究生单项奖（智育单项）。</span><span class="lang-en">DUT Doctoral Excellence Scholarship; Graduate Individual Scholarship (Academic Excellence).</span></li>
+  <li><strong>2026.06</strong><span class="lang-zh">首届环境纳米技术国际研讨会（ISEN 2026）最佳墙报奖。</span><span class="lang-en">Best Poster Award, First International Symposium on Environmental Nanotechnology (ISEN 2026).</span></li>
+  <li><strong>2026.04</strong><span class="lang-zh">大连理工大学"连理全球"留学专项资助。</span><span class="lang-en">DUT Global Vision Project Funding (University of Luxembourg).</span></li>
+  <li><strong>2025.12</strong><span class="lang-zh">教育部 2025 春晖海外青年优秀成果（创新创业类）。</span><span class="lang-en">2025 Chunhui Overseas Young Excellent Achievement Collection, Ministry of Education of China.</span></li>
+  <li><strong>2025.09</strong><span class="lang-zh">博士研究生国家奖学金。</span><span class="lang-en">National Scholarship for Doctoral Students, Ministry of Education of China.</span></li>
+  <li><strong>2024.11</strong><span class="lang-zh">2024 韩中日能源环境联合研讨会优秀报告奖（韩国延世大学）。</span><span class="lang-en">Award for Excellent Presentation, 2024 Korea–China–Japan Joint Symposium on Energy and Environment (Yonsei University).</span></li>
+</ul>
+
+<p class="news-more">
+  <a href="{{ '/cv/' | relative_url }}">
+    <span class="lang-zh">完整荣誉、项目与技能清单见简历</span><span class="lang-en">Full list of honors, projects and skills in the CV</span>
+    <span aria-hidden="true">→</span>
+  </a>
+</p>
+
 <p class="metrics-foot">
   <span class="lang-zh">另有团体标准 1 项（参编）、科技成果转化 1 项（转让金额 40 万元）。引用数据更新于 {{ site.data.scholar.updated_at | date: "%Y-%m" }}，来源 Google Scholar。</span>
   <span class="lang-en">Additionally: one group standard (participating drafter) and one technology transfer (RMB 400,000). Citation data as of {{ site.data.scholar.updated_at | date: "%Y-%m" }}, via Google Scholar.</span>
 </p>
 
-<h2><span class="lang-zh">研究方向</span><span class="lang-en">Research Interests</span></h2>
+<h2><span class="lang-zh">研究方向</span><span class="lang-en">Research</span></h2>
 
-<p class="lang-zh">高盐有机釜残、含固废液这类难处理工业废物，在焚烧炉里要经历气固液多相湍流与燃烧化学反应的剧烈耦合——温度超千度、介质不透明，几乎无法直接测量或观察。这一过程长期依赖经验试错，稳定性差、能耗高、还伴随二次污染风险。<strong>我的研究要打开这个黑箱：用数值方法还原反应器内部看不见的流动与反应，再用人工智能把它压缩成可实时调用的预测能力。</strong>目标不止是模拟一次个案，而是建立一套可迁移到不同炉型、不同废物物性的通用方法论，分为三个相互支撑的层面。</p>
-<p class="lang-en">High-salt organic still residues and other hard-to-treat industrial wastes undergo violent, tightly coupled gas–solid–liquid turbulence and combustion chemistry inside an incinerator — above a thousand degrees, inside an opaque medium that is nearly impossible to observe directly. This process has long relied on trial-and-error experience, with poor stability, high energy consumption and secondary-pollution risk. <strong>My research opens up that black box: using numerical methods to reconstruct the invisible flow and reaction inside the reactor, then compressing that into real-time predictive capability with AI.</strong> The goal is not a one-off simulation but a transferable methodology that generalizes across furnace types and waste properties, built on three mutually supporting layers.</p>
+<p class="lang-zh">研究领域为废弃物焚烧过程中的多相流动、传热与热化学反应建模，具体包括：</p>
+<p class="lang-en">Research area: modeling of multiphase flow, heat transfer and thermochemical reaction in waste incineration, including:</p>
 
 <div class="home-grid">
   <div class="home-card">
-    <h3><i class="fa-solid fa-wind" aria-hidden="true"></i> <span class="lang-zh">多相流与燃烧的高保真建模</span><span class="lang-en">High-Fidelity Multiphase Combustion Modeling</span></h3>
-    <p class="lang-zh">以 CFD 构建气固液多相流、燃烧与多相热化学反应耦合的欧拉-拉格朗日模型，在计算中还原真实炉内无法测量的温度场、流场与反应路径，覆盖实验室规模到工业规模。</p>
-    <p class="lang-en">Eulerian-Lagrangian CFD models that couple gas-solid-liquid multiphase flow with combustion and multiphase thermochemical reaction, reconstructing temperature, flow and reaction pathways that cannot be measured inside a real furnace — from lab scale to industrial scale.</p>
+    <h3><i class="fa-solid fa-wind" aria-hidden="true"></i> <span class="lang-zh">多相流与燃烧数值模拟</span><span class="lang-en">Multiphase Flow and Combustion Simulation</span></h3>
+    <p class="lang-zh">基于 CFD 的欧拉-拉格朗日建模，耦合气固液多相流动、传热与燃烧，覆盖实验室至工业规模反应器。</p>
+    <p class="lang-en">CFD-based Eulerian–Lagrangian modeling coupling gas–solid–liquid multiphase flow, heat transfer and combustion, from laboratory to industrial-scale reactors.</p>
   </div>
   <div class="home-card">
-    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> <span class="lang-zh">AI 驱动的实时预测与预警</span><span class="lang-en">AI-Driven Real-Time Prediction</span></h3>
-    <p class="lang-zh">用神经网络代理模型（如输入凸神经网络）学习高精度 CFD 的解空间，把小时级的仿真压缩到毫秒级推断，让非牛顿流体流动与异常工况可以被提前预测、预警。</p>
-    <p class="lang-en">Neural network surrogates (e.g. input-convex neural networks) learn the solution space of high-fidelity CFD, compressing hour-long simulations into millisecond inference — enabling non-Newtonian flow behavior and abnormal operating conditions to be predicted and flagged ahead of time.</p>
+    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> <span class="lang-zh">神经网络代理模型</span><span class="lang-en">Neural-Network Surrogates</span></h3>
+    <p class="lang-zh">以机器学习与神经网络（含输入凸神经网络）构建流场与流变特性的快速预测模型，替代高耗时数值求解。</p>
+    <p class="lang-en">Machine learning and neural networks (including input-convex neural networks) for fast prediction of flow fields and rheological properties, replacing costly numerical solutions.</p>
   </div>
   <div class="home-card">
-    <h3><i class="fa-solid fa-industry" aria-hidden="true"></i> <span class="lang-zh">面向工程的设计与优化</span><span class="lang-en">Engineering Design and Optimization</span></h3>
-    <p class="lang-zh">把模型与预测能力落到焚烧炉、循环流化床、双流体喷嘴等真实装备上，解决防堵、燃烧不透与能耗偏高等工程痛点，推动从"凭经验调"到"数据驱动决策"的转变。</p>
-    <p class="lang-en">Translating models and predictive capability into real equipment — incinerators, circulating fluidized beds, twin-fluid nozzles — to resolve clogging, incomplete combustion and excess energy use, shifting operation from rule-of-thumb tuning to data-driven decisions.</p>
+    <h3><i class="fa-solid fa-industry" aria-hidden="true"></i> <span class="lang-zh">反应器与喷嘴设计优化</span><span class="lang-en">Reactor and Nozzle Design Optimization</span></h3>
+    <p class="lang-zh">焚烧炉、循环流化床与双流体喷嘴的流场设计、防堵与运行参数优化。</p>
+    <p class="lang-en">Flow-field design, anti-clogging and operating-parameter optimization for incinerators, circulating fluidized beds and twin-fluid nozzles.</p>
   </div>
 </div>
 
