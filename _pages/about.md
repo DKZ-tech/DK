@@ -8,14 +8,14 @@ redirect_from:
 ---
 
 <div class="profile-lead">
-  <p class="lang-zh"><strong>张东宽</strong>，大连理工大学环境科学与工程专业博士研究生（2023 年入学，预计 2027 年毕业），导师姬国钊教授。研究方向为废弃物焚烧的智能多相流与燃烧建模，方法涵盖 CFD 数值模拟、欧拉-拉格朗日多相流建模、多相热化学反应求解与神经网络代理模型。已在 <em>Renewable and Sustainable Energy Reviews</em>、<em>Applied Thermal Engineering</em>、<em>Chemical Engineering Research and Design</em> 等期刊发表论文 11 篇（第一作者 5 篇），获授权及公开专利 8 项、软件著作权 2 项，总被引 60 次。曾获博士研究生国家奖学金、大连理工大学博士生卓越奖学金；先后于东京科学大学（原东京工业大学）Cross 实验室（国家公派，CSC）与卢森堡大学 Ladewig 实验室开展联合培养。</p>
-  <p class="lang-en"><strong>Dongkuan Zhang</strong> is a PhD candidate in Environmental Science and Engineering at Dalian University of Technology (enrolled 2023, expected 2027), supervised by Prof. Guozhao Ji. His research is on intelligent multiphase flow and combustion modeling for waste incineration, spanning CFD simulation, Eulerian–Lagrangian multiphase modeling, multiphase thermochemical reaction solving and neural-network surrogates. He has published 11 journal articles (5 as first author) in journals including <em>Renewable and Sustainable Energy Reviews</em>, <em>Applied Thermal Engineering</em> and <em>Chemical Engineering Research and Design</em>, holds 8 patents and 2 software copyrights, and has 60 citations in total. He has received the National Scholarship for Doctoral Students and the DUT Doctoral Excellence Scholarship, and has conducted joint PhD research at the Cross Laboratory, Institute of Science Tokyo (CSC government-funded) and the Ladewig group, University of Luxembourg.</p>
+  <p class="lang-zh"><strong>张东宽</strong>，大连理工大学环境科学与工程专业博士研究生（2023 年入学，预计 2027 年毕业），导师姬国钊教授。研究方向为废弃物焚烧的智能多相流与燃烧建模，方法体系涵盖 CFD 数值模拟、欧拉-拉格朗日多相流建模、多相热化学反应求解与神经网络代理模型。已在 <em>Renewable and Sustainable Energy Reviews</em>、<em>Applied Thermal Engineering</em>、<em>Chemical Engineering Research and Design</em> 等国际期刊发表论文 11 篇（第一作者 5 篇），获授权及公开专利 8 项、软件著作权 2 项、参编团体标准 1 项，总被引 60 次，h-index 4。研究成果完成科技成果转化 1 项（转让金额 40 万元）。曾获博士研究生国家奖学金、大连理工大学博士生卓越奖学金、教育部春晖海外青年优秀成果、ISEN 2026 最佳墙报奖。博士期间两次入选公派联合培养：国家公派（CSC）赴东京科学大学（原东京工业大学）Cross 实验室，校级公派（"连理全球"留学专项）赴卢森堡大学 Ladewig 课题组。</p>
+  <p class="lang-en"><strong>Dongkuan Zhang</strong> is a PhD candidate in Environmental Science and Engineering at Dalian University of Technology (enrolled 2023, expected 2027), supervised by Prof. Guozhao Ji. His research is on intelligent multiphase flow and combustion modeling for waste incineration, with a methodological scope spanning CFD simulation, Eulerian–Lagrangian multiphase modeling, multiphase thermochemical reaction solving and neural-network surrogates. He has published 11 journal articles (5 as first author) in international journals including <em>Renewable and Sustainable Energy Reviews</em>, <em>Applied Thermal Engineering</em> and <em>Chemical Engineering Research and Design</em>; holds 8 patents, 2 software copyrights and has co-drafted 1 group standard; and has 60 citations with an h-index of 4. One technology transfer (RMB 400,000) has been completed from this work. He has received the National Scholarship for Doctoral Students, the DUT Doctoral Excellence Scholarship, the MOE Chunhui Overseas Young Excellent Achievement award and the Best Poster Award at ISEN 2026. Twice selected for government-sponsored joint PhD training: nationally funded (CSC) at the Cross Laboratory, Institute of Science Tokyo (formerly Tokyo Institute of Technology), and university-funded (DUT Global Vision Project) with the Ladewig group, University of Luxembourg.</p>
 </div>
 
 <h2><span class="lang-zh">培养经历</span><span class="lang-en">Training</span></h2>
 
-<p class="lang-zh">博士期间先后于日本东京科学大学（原东京工业大学）Cross 实验室与卢森堡大学 Ladewig 实验室联合培养，分别由国家公派留学基金（CSC）与大连理工大学"连理全球"专项资助。</p>
-<p class="lang-en">During the PhD, joint research at the Cross Laboratory, Institute of Science Tokyo (formerly Tokyo Institute of Technology), and the Ladewig group, University of Luxembourg, funded by the China Scholarship Council (CSC) and the DUT Global Vision Project respectively.</p>
+<p class="lang-zh">博士期间两次入选公派联合培养项目：一次由国家留学基金委（CSC）公派至东京科学大学（原东京工业大学）Cross 实验室，一次由学校公派（"连理全球"留学专项）至卢森堡大学 Ladewig 课题组。</p>
+<p class="lang-en">Twice selected for government-sponsored joint PhD training: nationally funded by the China Scholarship Council (CSC) at the Cross Laboratory, Institute of Science Tokyo (formerly Tokyo Institute of Technology), and university-funded through the DUT Global Vision Project with the Ladewig group, University of Luxembourg.</p>
 
 <div class="timeline">
   <div class="timeline-item">
@@ -34,9 +34,9 @@ redirect_from:
       <span class="timeline-year">2025 – 2026</span>
     </div>
     <div class="timeline-body">
-      <h3><span class="lang-zh">东京科学大学（原东京工业大学）· Cross 实验室 · 联合培养</span><span class="lang-en">Institute of Science Tokyo (formerly Tokyo Tech) · Cross Laboratory · Joint PhD</span></h3>
-      <p class="lang-zh">导师：<a href="https://zh.clab-tokyotech.org/">Jeffrey S. Cross 教授</a>。为期一年的联合培养，由国家公派留学基金（CSC）资助。</p>
-      <p class="lang-en">Supervisor: <a href="https://zh.clab-tokyotech.org/">Prof. Jeffrey S. Cross</a>. One-year joint PhD training funded by the China Scholarship Council (CSC).</p>
+      <h3><span class="lang-zh">东京科学大学（原东京工业大学）· Cross 实验室 · 国家公派联合培养</span><span class="lang-en">Institute of Science Tokyo (formerly Tokyo Tech) · Cross Laboratory · CSC-Funded Joint PhD</span></h3>
+      <p class="lang-zh">导师：<a href="https://zh.clab-tokyotech.org/">Prof. Dr. Jeffrey S. Cross</a>。为期一年的联合培养，由国家留学基金委（CSC）公派资助。</p>
+      <p class="lang-en">Supervisor: <a href="https://zh.clab-tokyotech.org/">Prof. Dr. Jeffrey S. Cross</a>. One-year joint PhD training, funded by the China Scholarship Council (CSC).</p>
     </div>
   </div>
 
@@ -45,9 +45,9 @@ redirect_from:
       <span class="timeline-year">2026.09 – 2027.03</span>
     </div>
     <div class="timeline-body">
-      <h3><span class="lang-zh">卢森堡大学 · 联合培养</span><span class="lang-en">University of Luxembourg · Joint PhD Visit</span></h3>
-      <p class="lang-zh">导师：Bradley P. Ladewig 教授。为期 6 个月，获大连理工大学"连理全球"留学专项资助。</p>
-      <p class="lang-en">Supervisor: Prof. Bradley P. Ladewig. Six-month research visit funded by the DUT Global Vision Project.</p>
+      <h3><span class="lang-zh">卢森堡大学 · Ladewig 课题组 · 校级公派联合培养</span><span class="lang-en">University of Luxembourg · Ladewig Group · University-Funded Joint PhD</span></h3>
+      <p class="lang-zh">导师：Prof. Dr. Bradley P. Ladewig。为期 6 个月，经校级评审选拔，获大连理工大学"连理全球"留学专项公派资助。</p>
+      <p class="lang-en">Supervisor: Prof. Dr. Bradley P. Ladewig. Six-month joint PhD visit, selected through university review and funded by the DUT Global Vision Project.</p>
     </div>
   </div>
 

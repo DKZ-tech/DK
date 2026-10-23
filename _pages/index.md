@@ -73,8 +73,8 @@ body_class: paper-page
     </div>
 
     <p class="landing__band-note">
-      <span class="lang-zh">三段联合培养：大连理工大学 · 东京科学大学（CSC 国家公派）· 卢森堡大学（连理全球专项）</span>
-      <span class="lang-en">Joint training at Dalian University of Technology · Institute of Science Tokyo (CSC) · University of Luxembourg (DUT Global Vision)</span>
+      <span class="lang-zh">大连理工大学 · 东京科学大学（CSC 国家公派）· 卢森堡大学（校级公派，连理全球专项）</span>
+      <span class="lang-en">Dalian University of Technology · Institute of Science Tokyo (CSC, national) · University of Luxembourg (DUT Global Vision, university-funded)</span>
     </p>
   </section>
 
