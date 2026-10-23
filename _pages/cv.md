@@ -3,6 +3,7 @@ layout: archive
 title: '<span class="lang-zh">简历 / </span><span class="lang-en">CV</span>'
 permalink: /cv/
 author_profile: true
+body_class: paper-page
 redirect_from:
   - /resume
 ---

@@ -2,6 +2,7 @@
 permalink: /about/
 title: '<span class="lang-zh">个人简介 / </span><span class="lang-en">About</span>'
 author_profile: true
+body_class: paper-page
 redirect_from:
   - /about.html
 ---
