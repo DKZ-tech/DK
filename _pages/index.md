@@ -30,23 +30,47 @@ body_class: paper-page
         <span class="lang-en">PhD Candidate · School of Environmental Science &amp; Engineering<br>Dalian University of Technology</span>
       </p>
 
-      <p class="landing__tagline">
-        <span class="lang-zh">废弃物焚烧的智能多相流与燃烧建模。以 CFD 与欧拉-拉格朗日方法求解多相流动、传热与热化学反应，以神经网络代理模型实现快速预测，服务于焚烧炉、循环流化床与双流体喷嘴的设计与优化。</span>
-        <span class="lang-en">Intelligent multiphase flow and combustion modeling for waste incineration. CFD and Eulerian–Lagrangian methods resolve multiphase flow, heat transfer and thermochemical reaction; neural-network surrogates deliver fast prediction, supporting the design and optimization of incinerators, circulating fluidized beds and twin-fluid nozzles.</span>
+      <p class="landing__contact">
+        <span class="lang-zh">中国·大连</span>
+        <span class="lang-en">Dalian, China</span>
+        <span class="landing__contact-sep" aria-hidden="true">·</span>
+        <a href="mailto:dkz@mail.dlut.edu.cn">dkz@mail.dlut.edu.cn</a>
+        <span class="landing__contact-sep" aria-hidden="true">·</span>
+        <span>WeChat · DK-techie</span>
+        <span class="landing__contact-sep" aria-hidden="true">·</span>
+        <a href="https://scholar.google.com/citations?user=_R1WLLgAAAAJ&amp;hl=en">Google Scholar</a>
+        <span class="landing__contact-sep" aria-hidden="true">·</span>
+        <a href="https://orcid.org/0009-0000-4584-7246">ORCID</a>
       </p>
-
-      <ul class="landing__contact">
-        <li><a href="mailto:dkz@mail.dlut.edu.cn">dkz@mail.dlut.edu.cn</a></li>
-        <li><span>WeChat · DK-techie</span></li>
-        <li><a href="https://scholar.google.com/citations?user=_R1WLLgAAAAJ&amp;hl=en">Google Scholar</a></li>
-        <li><a href="https://orcid.org/0009-0000-4584-7246">ORCID</a></li>
-      </ul>
     </div>
 
     <figure class="landing__portrait">
       <img src="{{ '/images/profile1.jpg' | relative_url }}" alt="Dongkuan Zhang — 张东宽" width="400" height="533" loading="eager">
     </figure>
   </header>
+
+  <nav class="landing__sections" aria-label="Site sections">
+    <a class="landing__row" href="{{ '/about/' | relative_url }}">
+      <span class="landing__row-title"><span class="lang-zh">个人简介</span><span class="lang-en">About</span></span>
+      <span class="landing__row-desc"><span class="lang-zh">培养经历、成果概览与研究兴趣</span><span class="lang-en">Training, output overview and research interests</span></span>
+      <span class="landing__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="landing__row" href="{{ '/publications/' | relative_url }}">
+      <span class="landing__row-title"><span class="lang-zh">论文成果</span><span class="lang-en">Publications</span></span>
+      <span class="landing__row-desc"><span class="lang-zh">期刊论文、授权专利、软著与标准</span><span class="lang-en">Journal articles, granted patents, software and standards</span></span>
+      <span class="landing__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="landing__row" href="{{ '/cv/' | relative_url }}">
+      <span class="landing__row-title"><span class="lang-zh">简历</span><span class="lang-en">Curriculum Vitae</span></span>
+      <span class="landing__row-desc"><span class="lang-zh">完整学术简历，可下载中英文 PDF</span><span class="lang-en">Full academic CV, with Chinese and English PDFs</span></span>
+      <span class="landing__arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="landing__row" href="{{ '/year-archive/' | relative_url }}">
+      <span class="landing__row-title"><span class="lang-zh">动态</span><span class="lang-en">Moments</span></span>
+      <span class="landing__row-desc"><span class="lang-zh">获奖、会议与学术交流记录</span><span class="lang-en">Awards, conferences and academic exchanges</span></span>
+      <span class="landing__arrow" aria-hidden="true">→</span>
+    </a>
+  </nav>
 
   <section class="landing__band">
     <div class="landing__metrics">
@@ -85,29 +109,6 @@ body_class: paper-page
       <span class="lang-en">Fig. 1　Coupling CFD with neural networks for intelligent multiphase flow modeling</span>
     </figcaption>
   </figure>
-
-  <nav class="landing__sections" aria-label="Site sections">
-    <a class="landing__row" href="{{ '/about/' | relative_url }}">
-      <span class="landing__row-title"><span class="lang-zh">个人简介</span><span class="lang-en">About</span></span>
-      <span class="landing__row-desc"><span class="lang-zh">培养经历、成果概览与研究兴趣</span><span class="lang-en">Training, output overview and research interests</span></span>
-      <span class="landing__arrow" aria-hidden="true">→</span>
-    </a>
-    <a class="landing__row" href="{{ '/publications/' | relative_url }}">
-      <span class="landing__row-title"><span class="lang-zh">论文成果</span><span class="lang-en">Publications</span></span>
-      <span class="landing__row-desc"><span class="lang-zh">期刊论文、授权专利、软著与标准</span><span class="lang-en">Journal articles, granted patents, software and standards</span></span>
-      <span class="landing__arrow" aria-hidden="true">→</span>
-    </a>
-    <a class="landing__row" href="{{ '/cv/' | relative_url }}">
-      <span class="landing__row-title"><span class="lang-zh">简历</span><span class="lang-en">Curriculum Vitae</span></span>
-      <span class="landing__row-desc"><span class="lang-zh">完整学术简历，可下载中英文 PDF</span><span class="lang-en">Full academic CV, with Chinese and English PDFs</span></span>
-      <span class="landing__arrow" aria-hidden="true">→</span>
-    </a>
-    <a class="landing__row" href="{{ '/year-archive/' | relative_url }}">
-      <span class="landing__row-title"><span class="lang-zh">动态</span><span class="lang-en">Moments</span></span>
-      <span class="landing__row-desc"><span class="lang-zh">获奖、会议与学术交流记录</span><span class="lang-en">Awards, conferences and academic exchanges</span></span>
-      <span class="landing__arrow" aria-hidden="true">→</span>
-    </a>
-  </nav>
 
   <footer class="landing__footer">
     <span class="lang-zh">欢迎就多相流建模、CFD 与 AI 交叉方向交流合作</span>
