@@ -8,8 +8,8 @@ redirect_from:
 ---
 
 <div class="profile-lead">
-  <p class="lang-zh">我是<strong>张东宽</strong>，大连理工大学环境学院博士研究生，导师为<a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">姬国钊教授</a>，预计 2027 年毕业。我的研究聚焦<strong>面向废弃物焚烧技术的智能多相流建模</strong>——把基于物理机理的 CFD 数值模拟与人工智能驱动的流场预测结合起来，解决高盐有机釜残这类难处理燃料"烧不透、喷嘴易堵"的工程难题。</p>
-  <p class="lang-en">I am <strong>Dongkuan Zhang</strong>, a PhD candidate at the School of Environmental Science and Engineering, Dalian University of Technology, supervised by <a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">Prof. Guozhao Ji</a> (expected graduation 2027). My research focuses on <strong>intelligent multiphase flow modeling for waste incineration</strong> — coupling physics-based CFD simulation with AI-driven flow prediction to solve the engineering problem of high-salt organic still residues that burn incompletely and clog spray nozzles.</p>
+  <p class="lang-zh">我是<strong>张东宽</strong>，大连理工大学环境学院博士研究生，导师为<a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">姬国钊教授</a>，预计 2027 年毕业。我研究<strong>废弃物焚烧中的智能多相流与燃烧建模</strong>：以计算流体力学（CFD）还原炉内高温、不透明条件下的气固液多相流动与热化学反应，再以人工智能把高保真仿真转化为可实时响应的预测能力，为工业废物处理提供一条从经验走向计算的路径。</p>
+  <p class="lang-en">I am <strong>Dongkuan Zhang</strong>, a PhD candidate at the School of Environmental Science and Engineering, Dalian University of Technology, supervised by <a href="https://faculty.dlut.edu.cn/jiguozhao/zh_CN/index.htm">Prof. Guozhao Ji</a> (expected graduation 2027). I study <strong>intelligent multiphase flow and combustion modeling for waste incineration</strong>: using computational fluid dynamics (CFD) to reconstruct the gas–solid–liquid flow and thermochemical reaction inside an incinerator under conditions too hot and too opaque to observe, then applying AI to turn high-fidelity simulation into real-time predictive capability — charting a path for industrial waste treatment from experience toward computation.</p>
 </div>
 
 <h2><span class="lang-zh">培养经历</span><span class="lang-en">Training</span></h2>
@@ -104,24 +104,24 @@ redirect_from:
 
 <h2><span class="lang-zh">研究方向</span><span class="lang-en">Research Interests</span></h2>
 
-<p class="lang-zh">我的研究围绕一条主线展开：<strong>如何让难处理的工业废弃物流在焚烧过程中变得可预测、可控制。</strong>具体分为三个相互支撑的层面。</p>
-<p class="lang-en">My research follows one central thread: <strong>how to make difficult industrial waste streams predictable and controllable during incineration.</strong> It divides into three mutually supporting layers.</p>
+<p class="lang-zh">高盐有机釜残、含固废液这类难处理工业废物，在焚烧炉里要经历气固液多相湍流与燃烧化学反应的剧烈耦合——温度超千度、介质不透明，几乎无法直接测量或观察。这一过程长期依赖经验试错，稳定性差、能耗高、还伴随二次污染风险。<strong>我的研究要打开这个黑箱：用数值方法还原反应器内部看不见的流动与反应，再用人工智能把它压缩成可实时调用的预测能力。</strong>目标不止是模拟一次个案，而是建立一套可迁移到不同炉型、不同废物物性的通用方法论，分为三个相互支撑的层面。</p>
+<p class="lang-en">High-salt organic still residues and other hard-to-treat industrial wastes undergo violent, tightly coupled gas–solid–liquid turbulence and combustion chemistry inside an incinerator — above a thousand degrees, inside an opaque medium that is nearly impossible to observe directly. This process has long relied on trial-and-error experience, with poor stability, high energy consumption and secondary-pollution risk. <strong>My research opens up that black box: using numerical methods to reconstruct the invisible flow and reaction inside the reactor, then compressing that into real-time predictive capability with AI.</strong> The goal is not a one-off simulation but a transferable methodology that generalizes across furnace types and waste properties, built on three mutually supporting layers.</p>
 
 <div class="home-grid">
   <div class="home-card">
-    <h3><i class="fa-solid fa-wind" aria-hidden="true"></i> <span class="lang-zh">CFD 数值模拟</span><span class="lang-en">CFD Simulation</span></h3>
-    <p class="lang-zh">多相流、燃烧与传热过程的欧拉-拉格朗日建模，覆盖实验室规模到工业规模。</p>
-    <p class="lang-en">Eulerian-Lagrangian modeling of multiphase flow, combustion and heat transfer, from lab scale to industrial scale.</p>
+    <h3><i class="fa-solid fa-wind" aria-hidden="true"></i> <span class="lang-zh">多相流与燃烧的高保真建模</span><span class="lang-en">High-Fidelity Multiphase Combustion Modeling</span></h3>
+    <p class="lang-zh">以 CFD 构建气固液多相流、燃烧与多相热化学反应耦合的欧拉-拉格朗日模型，在计算中还原真实炉内无法测量的温度场、流场与反应路径，覆盖实验室规模到工业规模。</p>
+    <p class="lang-en">Eulerian-Lagrangian CFD models that couple gas-solid-liquid multiphase flow with combustion and multiphase thermochemical reaction, reconstructing temperature, flow and reaction pathways that cannot be measured inside a real furnace — from lab scale to industrial scale.</p>
   </div>
   <div class="home-card">
-    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> <span class="lang-zh">AI 流场预测</span><span class="lang-en">AI Flow Prediction</span></h3>
-    <p class="lang-zh">机器学习与神经网络代理模型（如输入凸神经网络）用于流场快速预测与非牛顿流体建模。</p>
-    <p class="lang-en">Machine learning and neural network surrogates (e.g. input-convex neural networks) for fast flow prediction and non-Newtonian fluid modeling.</p>
+    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> <span class="lang-zh">AI 驱动的实时预测与预警</span><span class="lang-en">AI-Driven Real-Time Prediction</span></h3>
+    <p class="lang-zh">用神经网络代理模型（如输入凸神经网络）学习高精度 CFD 的解空间，把小时级的仿真压缩到毫秒级推断，让非牛顿流体流动与异常工况可以被提前预测、预警。</p>
+    <p class="lang-en">Neural network surrogates (e.g. input-convex neural networks) learn the solution space of high-fidelity CFD, compressing hour-long simulations into millisecond inference — enabling non-Newtonian flow behavior and abnormal operating conditions to be predicted and flagged ahead of time.</p>
   </div>
   <div class="home-card">
-    <h3><i class="fa-solid fa-industry" aria-hidden="true"></i> <span class="lang-zh">设备设计与优化</span><span class="lang-en">Equipment Design</span></h3>
-    <p class="lang-zh">焚烧炉、循环流化床、双流体喷嘴等装备的流场设计、防堵与运行优化。</p>
-    <p class="lang-en">Flow field design, anti-clogging and operational optimization of incinerators, circulating fluidized beds and twin-fluid nozzles.</p>
+    <h3><i class="fa-solid fa-industry" aria-hidden="true"></i> <span class="lang-zh">面向工程的设计与优化</span><span class="lang-en">Engineering Design and Optimization</span></h3>
+    <p class="lang-zh">把模型与预测能力落到焚烧炉、循环流化床、双流体喷嘴等真实装备上，解决防堵、燃烧不透与能耗偏高等工程痛点，推动从"凭经验调"到"数据驱动决策"的转变。</p>
+    <p class="lang-en">Translating models and predictive capability into real equipment — incinerators, circulating fluidized beds, twin-fluid nozzles — to resolve clogging, incomplete combustion and excess energy use, shifting operation from rule-of-thumb tuning to data-driven decisions.</p>
   </div>
 </div>
 

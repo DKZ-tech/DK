@@ -31,8 +31,8 @@ body_class: paper-page
       </p>
 
       <p class="landing__tagline">
-        <span class="lang-zh">高盐有机釜残在焚烧炉里烧不透，喷嘴还总被非牛顿流体堵死。我用 CFD 与神经网络，把这类难处理工业废物的流动与燃烧，从"凭经验调"变成"可预测、可预警、可优化"。</span>
-        <span class="lang-en">High-salt organic still residues burn incompletely, and non-Newtonian fluids clog the spray nozzles. I combine CFD with neural networks to turn the flow and combustion of these difficult industrial wastes from rule-of-thumb operation into something predictable, warnable and optimizable.</span>
+        <span class="lang-zh">焚烧炉内部是一千度、不透明的黑箱：气固液多相湍流与热化学反应交织，几乎无法测量。我以 CFD 还原这场看不见的反应，再用神经网络把它压缩成毫秒级的预测——让废弃物焚烧从凭经验操作，走向可计算、可预警、可优化。</span>
+        <span class="lang-en">Inside an incinerator is a thousand-degree black box: gas–solid–liquid turbulence entangled with thermochemical reaction, almost impossible to measure. I reconstruct that invisible chemistry with CFD, then compress it with neural networks into millisecond-scale prediction — moving waste incineration from rule-of-thumb operation toward something computable, anticipatory and optimizable.</span>
       </p>
 
       <ul class="landing__contact">
